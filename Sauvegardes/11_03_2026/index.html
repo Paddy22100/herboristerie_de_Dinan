@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Le Jardin des Colibris - Herboristerie artisanale à Dinan depuis 2014. Céline et Henrieta, herboristes diplômées, vous accueillent pour des plantes médicinales, tisanes bio et conseils phytothérapie. Découvrez notre boutique au cœur de la Bretagne.">
+    <meta name="keywords" content="herboristerie Dinan, plantes médicinales Dinan, tisanes Dinan, phytothérapie Dinan, herboristerie Bretagne, Céline Henrieta herboristes, tisanes bio Bretagne, plantes médicinales bio, boutique herboristerie Dinan, conseils phytothérapie">
+    <meta name="author" content="Le Jardin des Colibris">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Le Jardin des Colibris - Herboristerie Artisanale à Dinan">
+    <meta property="og:description" content="Céline et Henrieta, herboristes diplômées, vous accueillent depuis 2014 pour des plantes médicinales, tisanes bio et conseils phytothérapie au cœur de Dinan.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:region" content="Bretagne">
+    <meta property="og:city" content="Dinan">
+    <meta property="og:postal-code" content="22100">
+    <meta property="og:country-name" content="France">
+    
+    <!-- Local SEO -->
+    <meta name="geo.region" content="FR-BRE">
+    <meta name="geo.placename" content="Dinan">
+    <meta name="geo.position" content="48.4565;-2.0476">
+    <meta name="ICBM" content="48.4565,-2.0476">
+    <link rel="alternate" href="https://jardindescolibris.fr" hreflang="fr-fr">
+    
+    <title>Le Jardin des Colibris - Herboristerie à Dinan (22) | Plantes Médicinales & Tisanes Bio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Alice&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sage': '#8FAF9B',
+                        'forest': '#4F6F5E',
+                        'leaf': '#6F8F6B',
+                        'lavender': '#A89BC7',
+                        'flower': '#E6A5A5',
+                        'chamomile': '#E7C86E',
+                        'natural': '#F7F6F2',
+                        'botanical': '#E8E2D7',
+                        'soft-gray': '#6B6B6B'
+                    },
+                    fontFamily: {
+                        'allura': ['Allura', 'cursive'],
+                        'alice': ['Alice', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Alice', serif;
+            background-color: #F7F6F2;
+            color: #4F6F5E;
+        }
+        
+        .font-allura {
+            font-family: 'Allura', 'cursive';
+        }
+        
+        .font-alice {
+            font-family: 'Alice', 'serif';
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #F7F6F2;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #8FAF9B;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6F8F6B;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(3deg); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes parallax {
+            from { transform: translateY(0); }
+            to { transform: translateY(-50px); }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .parallax-bg {
+            animation: parallax 20s ease-in-out infinite alternate;
+        }
+        
+        .watercolor-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3CradialGradient id='watercolor1' cx='50%25' cy='50%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%238FAF9B' stop-opacity='0.1'/%3E%3Cstop offset='100%25' stop-color='%238FAF9B' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='watercolor2' cx='80%25' cy='20%25' r='40%25'%3E%3Cstop offset='0%25' stop-color='%23A89BC7' stop-opacity='0.08'/%3E%3Cstop offset='100%25' stop-color='%23A89BC7' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='watercolor3' cx='20%25' cy='80%25' r='45%25'%3E%3Cstop offset='0%25' stop-color='%23E7C86E' stop-opacity='0.06'/%3E%3Cstop offset='100%25' stop-color='%23E7C86E' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='200' height='200' fill='%23F7F6F2'/%3E%3Ccircle cx='100' cy='100' r='80' fill='url(%23watercolor1)'/%3E%3Ccircle cx='160' cy='40' r='60' fill='url(%23watercolor2)'/%3E%3Ccircle cx='40' cy='160' r='70' fill='url(%23watercolor3)'/%3E%3C/svg%3E");
+            background-size: 400px 400px;
+            background-position: center;
+            background-repeat: repeat;
+        }
+        
+        .botanical-texture {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 50 Q30 30, 50 20 Q70 30, 80 50 Q70 70, 50 80 Q30 70, 20 50' fill='%238FAF9B' fill-opacity='0.05'/%3E%3Cpath d='M30 60 Q40 40, 60 30 Q80 40, 90 60 Q80 80, 60 90 Q40 80, 30 60' fill='%23A89BC7' fill-opacity='0.03'/%3E%3C/svg%3E");
+            background-size: 200px 200px;
+            background-position: center;
+            background-repeat: repeat;
+        }
+        
+        .hover-lift {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(79, 111, 94, 0.2);
+        }
+        
+        .botanical-border {
+            border-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q25 5, 50 10 Q75 15, 100 10' stroke='%238FAF9B' stroke-width='1' fill='none' opacity='0.3'/%3E%3C/svg%3E") 1;
+        }
+        
+        .hummingbird {
+            background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 10 Q20 5, 25 10 Q20 15, 15 10' fill='%23E7C86E' fill-opacity='0.2'/%3E%3Ccircle cx='15' cy='10' r='2' fill='%238FAF9B' fill-opacity='0.3'/%3E%3C/svg%3E");
+            background-size: 30px 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        /* Gradient text */
+        .text-gradient {
+            background: linear-gradient(135deg, #4F6F5E 0%, #6F8F6B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="watercolor-bg antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-natural/95 backdrop-blur-md border-b border-sage/20 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="Medias/logo.png" alt="Le Jardin des Colibris - Herboristerie de Dinan" class="w-12 h-12 rounded-full object-cover">
+                    <div class="flex flex-col">
+                        <span class="font-allura text-2xl text-forest leading-none">Le Jardin des Colibris</span>
+                        <span class="text-xs text-soft-gray tracking-widest uppercase">Herboristerie Artisanale</span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-forest hover:text-sage transition-colors duration-300 font-medium border-b-2 border-sage">Accueil</a>
+                    <a href="boutique.html" class="text-forest hover:text-sage transition-colors duration-300 font-medium">Herboristerie</a>
+                    <a href="plantes-tisanes.html" class="text-forest hover:text-sage transition-colors duration-300 font-medium">Plantes</a>
+                    <a href="plantes-tisanes.html#tisanes" class="text-forest hover:text-sage transition-colors duration-300 font-medium">Tisanes</a>
+                    <a href="conseils.html" class="text-forest hover:text-sage transition-colors duration-300 font-medium">Conseils</a>
+                    <a href="apropos.html" class="text-forest hover:text-sage transition-colors duration-300 font-medium">À propos</a>
+                    <a href="contact.html" class="bg-forest text-natural px-6 py-2 rounded-full hover:bg-leaf transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Contact</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-forest hover:text-sage focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-natural border-t border-sage/20">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md font-semibold">Accueil</a>
+                <a href="boutique.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">Herboristerie</a>
+                <a href="plantes-tisanes.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">Plantes</a>
+                <a href="plantes-tisanes.html#tisanes" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">Tisanes</a>
+                <a href="conseils.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">Conseils</a>
+                <a href="apropos.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">À propos</a>
+                <a href="contact.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Botanical Background -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 watercolor-bg opacity-60"></div>
+            <div class="absolute top-10 right-10 w-80 h-80 bg-sage/15 rounded-full blur-3xl float-animation parallax-bg"></div>
+            <div class="absolute bottom-10 left-10 w-64 h-64 bg-lavender/10 rounded-full blur-3xl float-animation" style="animation-delay: 3s;"></div>
+            <div class="absolute top-1/2 left-1/4 w-48 h-48 bg-chamomile/10 rounded-full blur-2xl float-animation" style="animation-delay: 1.5s;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="text-center space-y-8 fade-in">
+                <!-- Location Badge -->
+                <div class="inline-flex items-center gap-2 bg-natural/80 backdrop-blur-sm px-6 py-3 rounded-full text-forest border border-sage/30 shadow-lg">
+                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    <span class="font-medium">Dinan, Bretagne</span>
+                </div>
+                
+                <!-- Main Title -->
+                <div class="space-y-4">
+                    <h1 class="font-allura text-6xl md:text-7xl lg:text-8xl text-gradient leading-tight">
+                        Le Jardin des<br>
+                        <span class="text-leaf">Colibris</span>
+                    </h1>
+                    <p class="font-allura text-3xl md:text-4xl text-soft-gray italic">
+                        Herboristerie Artisanale
+                    </p>
+                    <div class="flex items-center justify-center gap-2 text-sm text-sage">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        <span>Au cœur de Dinan depuis 2014</span>
+                    </div>
+                </div>
+                
+                <!-- Subtitle -->
+                <p class="text-lg md:text-xl text-soft-gray max-w-3xl mx-auto leading-relaxed font-alice">
+                    Céline et Henrieta, herboristes diplômées, vous accueillent dans leur boutique du centre historique de Dinan 
+                    pour vous faire découvrir les bienfaits des plantes médicinales et de la phytothérapie. 
+                    Une expertise reconnue pour votre bien-être naturel au cœur de la Bretagne.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+                    <a href="plantes-tisanes.html" class="group inline-flex items-center justify-center gap-3 bg-forest text-natural px-8 py-4 rounded-full hover:bg-leaf transition-all duration-400 shadow-lg hover:shadow-xl hover:-translate-y-1 transform">
+                        <span class="font-medium">Découvrir les plantes</span>
+                        <i data-lucide="sprout" class="w-5 h-5 group-hover:rotate-12 transition-transform"></i>
+                    </a>
+                    <a href="contact.html" class="group inline-flex items-center justify-center gap-3 border-2 border-forest text-forest px-8 py-4 rounded-full hover:bg-forest hover:text-natural transition-all duration-400 transform hover:-translate-y-0.5">
+                        <span class="font-medium">Nous rendre visite</span>
+                        <i data-lucide="map-pin" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                    </a>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="flex flex-wrap justify-center items-center gap-8 pt-6 text-sm text-soft-gray">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="award" class="w-5 h-5 text-chamomile"></i>
+                        <span>10+ ans d'expérience</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="leaf" class="w-5 h-5 text-sage"></i>
+                        <span>Plantes locales & bio</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="heart" class="w-5 h-5 text-flower"></i>
+                        <span>Conseils personnalisés</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="users" class="w-5 h-5 text-lavender"></i>
+                        <span>1000+ clients accompagnés</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Presentation Section -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 botanical-texture opacity-30"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-sage font-medium tracking-wider uppercase text-sm">Notre boutique</span>
+                <h2 class="font-allura text-5xl md:text-6xl text-forest mt-2 mb-4">Une herboristerie de confiance à Dinan</h2>
+                <div class="w-32 h-1 bg-chamomile mx-auto rounded-full mb-6"></div>
+                <p class="text-lg text-soft-gray max-w-3xl mx-auto">
+                    Bienvenue dans notre espace naturel où tradition et modernité se rencontrent pour votre bien-être.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-sage/20">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-sage/20 rounded-full flex items-center justify-center">
+                                <i data-lucide="store" class="w-6 h-6 text-forest"></i>
+                            </div>
+                            <h3 class="font-allura text-2xl text-forest">Ambiance apaisante</h3>
+                        </div>
+                        <p class="text-soft-gray leading-relaxed">
+                            Installée depuis 2014 dans le centre historique de Dinan, notre herboristerie 
+                            est reconnue pour la qualité de ses plantes médicinales et l'expertise de Céline et Henrieta. 
+                            Une ambiance chaleureuse où l'odeur des plantes vous invite à la découverte.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-sage/20">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-lavender/20 rounded-full flex items-center justify-center">
+                                <i data-lucide="users" class="w-6 h-6 text-forest"></i>
+                            </div>
+                            <h3 class="font-allura text-2xl text-forest">Conseils personnalisés</h3>
+                        </div>
+                        <p class="text-soft-gray leading-relaxed">
+                            Céline et Henrieta, herboristes diplômées en phytothérapie et aromathérapie, vous accompagnent 
+                            avec bienveillance pour choisir les plantes adaptées à vos besoins. 
+                            Plus de 1000 clients font confiance à leur expertise chaque année.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-sage/20">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-chamomile/20 rounded-full flex items-center justify-center">
+                                <i data-lucide="sparkles" class="w-6 h-6 text-forest"></i>
+                            </div>
+                            <h3 class="font-allura text-2xl text-forest">Produits d'exception</h3>
+                        </div>
+                        <p class="text-soft-gray leading-relaxed">
+                            Une sélection rigoureuse de plantes médicinales bio, tisanes artisanales, 
+                            huiles essentielles et cosmétiques naturels. Nous privilégions les producteurs locaux 
+                            et les circuits courts pour garantir fraîcheur et qualité.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="http://static.photos/workspace/640x480/25" alt="Intérieur de l'herboristerie Le Jardin des Colibris" class="w-full h-auto object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-forest/40 to-transparent"></div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-natural p-6 rounded-2xl shadow-xl border border-sage/20 max-w-xs">
+                        <p class="font-allura text-xl text-forest italic">"La nature nous offre tout ce dont nous avons besoin pour nous soigner."</p>
+                        <p class="text-sm text-soft-gray mt-2">— Céline et Henrieta, fondatrices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-gradient-to-br from-sage/5 to-lavender/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-sage font-medium tracking-wider uppercase text-sm">Bienfaits</span>
+                <h2 class="font-allura text-5xl md:text-6xl text-forest mt-2 mb-4">Les bienfaits de la phytothérapie</h2>
+                <div class="w-32 h-1 bg-chamomile mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center hover-lift border border-sage/10">
+                    <div class="w-16 h-16 bg-forest/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="heart" class="w-8 h-8 text-forest"></i>
+                    </div>
+                    <h3 class="font-allura text-2xl text-forest mb-3">Naturel</h3>
+                    <p class="text-soft-gray text-sm">Des solutions 100% naturelles sans additifs chimiques pour respecter votre corps.</p>
+                </div>
+                
+                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center hover-lift border border-sage/10">
+                    <div class="w-16 h-16 bg-leaf/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="shield" class="w-8 h-8 text-forest"></i>
+                    </div>
+                    <h3 class="font-allura text-2xl text-forest mb-3">Efficace</h3>
+                    <p class="text-soft-gray text-sm">Des millénaires d'utilisation prouvent l'efficacité des plantes médicinales.</p>
+                </div>
+                
+                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center hover-lift border border-sage/10">
+                    <div class="w-16 h-16 bg-lavender/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="zap" class="w-8 h-8 text-forest"></i>
+                    </div>
+                    <h3 class="font-allura text-2xl text-forest mb-3">Énergisant</h3>
+                    <p class="text-soft-gray text-sm">Retrouvez vitalité et énergie grâce aux bienfaits des plantes.</p>
+                </div>
+                
+                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center hover-lift border border-sage/10">
+                    <div class="w-16 h-16 bg-chamomile/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="moon" class="w-8 h-8 text-forest"></i>
+                    </div>
+                    <h3 class="font-allura text-2xl text-forest mb-3">Apaisant</h3>
+                    <p class="text-soft-gray text-sm">Calmez le stress et l'anxiété avec des solutions naturelles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Plants Section -->
+    <section class="py-20 relative">
+        <div class="absolute inset-0 watercolor-bg opacity-40"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-sage font-medium tracking-wider uppercase text-sm">Nos vedettes</span>
+                <h2 class="font-allura text-5xl md:text-6xl text-forest mt-2 mb-4">Plantes médicinales d'exception</h2>
+                <div class="w-32 h-1 bg-chamomile mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover-lift border border-sage/20">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/herbs/400x300/60" alt="Camomille" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-allura text-2xl text-forest mb-2">Camomille</h3>
+                        <p class="text-xs text-sage font-medium mb-3">Détente & Sommeil</p>
+                        <p class="text-soft-gray text-sm">Apaise le système nerveux, favorise le sommeil et soulage les tensions digestives.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover-lift border border-sage/20">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/herbs/400x300/61" alt="Menthe poivrée" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-allura text-2xl text-forest mb-2">Menthe poivrée</h3>
+                        <p class="text-xs text-sage font-medium mb-3">Digestion</p>
+                        <p class="text-soft-gray text-sm">Soulage les maux d'estomac, les nausées et favorise une digestion confortable.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover-lift border border-sage/20">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/herbs/400x300/62" alt="Valériane" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-allura text-2xl text-forest mb-2">Valériane</h3>
+                        <p class="text-xs text-sage font-medium mb-3">Sommeil profond</p>
+                        <p class="text-soft-gray text-sm">Plante reine pour lutter contre l'insomnie et retrouver un sommeil réparateur.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover-lift border border-sage/20">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/herbs/400x300/63" alt="Echinacée" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-allura text-2xl text-forest mb-2">Echinacée</h3>
+                        <p class="text-xs text-sage font-medium mb-3">Immunité</p>
+                        <p class="text-soft-gray text-sm">Renforce les défenses naturelles et protège contre les infections saisonnières.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Herbal Teas Section -->
+    <section class="py-20 bg-gradient-to-br from-chamomile/5 to-sage/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-sage font-medium tracking-wider uppercase text-sm">Tisanes bien-être</span>
+                <h2 class="font-allura text-5xl md:text-6xl text-forest mt-2 mb-4">Nos créations artisanales</h2>
+                <div class="w-32 h-1 bg-chamomile mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center hover-lift border border-sage/10">
+                    <div class="w-16 h-16 bg-chamomile/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="moon" class="w-8 h-8 text-forest"></i>
+                    </div>
+                    <h3 class="font-allura text-xl text-forest mb-2">Nuit Sereine</h3>
+                    <p class="text-xs text-sage font-medium mb-2">Sommeil</p>
+                    <p class="text-soft-gray text-sm">Camomille, valériane, tilleul</p>
+                </div>
+                
+                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center hover-lift border border-sage/10">
+                    <div class="w-16 h-16 bg-sage/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="heart" class="w-8 h-8 text-forest"></i>
+                    </div>
+                    <h3 class="font-allura text-xl text-forest mb-2">Digestive</h3>
+                    <p class="text-xs text-sage font-medium mb-2">Bien-être digestif</p>
+                    <p class="text-soft-gray text-sm">Menthe, fenouil, camomille</p>
+                </div>
+                
+                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center hover-lift border border-sage/10">
+                    <div class="w-16 h-16 bg-lavender/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="sparkles" class="w-8 h-8 text-forest"></i>
+                    </div>
+                    <h3 class="font-allura text-xl text-forest mb-2">Détente</h3>
+                    <p class="text-xs text-sage font-medium mb-2">Anti-stress</p>
+                    <p class="text-soft-gray text-sm">Mélisse, lavande, verveine</p>
+                </div>
+                
+                <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center hover-lift border border-sage/10">
+                    <div class="w-16 h-16 bg-leaf/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="shield" class="w-8 h-8 text-forest"></i>
+                    </div>
+                    <h3 class="font-allura text-xl text-forest mb-2">Immunité</h3>
+                    <p class="text-xs text-sage font-medium mb-2">Défenses naturelles</p>
+                    <p class="text-soft-gray text-sm">Echinacée, thym, gingembre</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 botanical-texture opacity-20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-sage font-medium tracking-wider uppercase text-sm">Témoignages</span>
+                <h2 class="font-allura text-5xl md:text-6xl text-forest mt-2 mb-4">Ce que nos clients disent</h2>
+                <div class="w-32 h-1 bg-chamomile mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-sage/20">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-chamomile fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-chamomile fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-chamomile fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-chamomile fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-chamomile fill-current"></i>
+                    </div>
+                    <p class="text-soft-gray mb-6 italic">
+                        "Une herboristerie d'exception à Dinan ! Céline et Henrieta sont d'une grande écoute et leurs conseils m'ont beaucoup aidée pour retrouver un sommeil apaisé. Les tisanes sont délicieuses et efficaces."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-sage/20 flex items-center justify-center text-forest font-bold">M</div>
+                        <div>
+                            <p class="font-bold text-forest">Marie L.</p>
+                            <p class="text-xs text-soft-gray">Cliente fidèle</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-sage/20">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-chamomile fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-chamomile fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-chamomile fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-chamomile fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-chamomile fill-current"></i>
+                    </div>
+                    <p class="text-soft-gray mb-6 italic">
+                        "Enfin une vraie herboristerie avec des produits locaux et de qualité ! L'ambiance est apaisante et les conseils sont toujours pertinents. Je recommande vivement."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-lavender/20 flex items-center justify-center text-forest font-bold">P</div>
+                        <div>
+                            <p class="font-bold text-forest">Pierre D.</p>
+                            <p class="text-xs text-soft-gray">Nouveau client</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-sage/20">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 text-chamomile fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-chamomile fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-chamomile fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-chamomile fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 text-chamomile fill-current"></i>
+                    </div>
+                    <p class="text-soft-gray mb-6 italic">
+                        "Je viens spécialement de Saint-Malo pour faire mes achats ici. La qualité des plantes médicinales est irréprochable et Céline prend le temps de tout expliquer."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-flower/20 flex items-center justify-center text-forest font-bold">S</div>
+                        <div>
+                            <p class="font-bold text-forest">Sophie B.</p>
+                            <p class="text-xs text-soft-gray">Cliente régulière</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Invitation Section -->
+    <section class="py-20 bg-gradient-to-br from-forest to-leaf text-natural text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="font-allura text-5xl md:text-6xl mb-6">Prêt à découvrir le monde des plantes ?</h2>
+            <p class="text-xl text-natural/90 mb-8 max-w-2xl mx-auto">
+                Venez nous rendre visite dans notre boutique au cœur de Dinan et laissez-vous guider 
+                vers le bien-être naturel grâce à la phytothérapie traditionnelle.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <a href="contact.html" class="group inline-flex items-center justify-center gap-3 bg-chamomile text-forest px-8 py-4 rounded-full hover:bg-yellow-400 transition-all duration-400 font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    <span>Prendre rendez-vous</span>
+                    <i data-lucide="calendar" class="w-5 h-5 group-hover:rotate-12 transition-transform"></i>
+                </a>
+                <a href="plantes-tisanes.html" class="group inline-flex items-center justify-center gap-3 border-2 border-natural text-natural px-8 py-4 rounded-full hover:bg-natural hover:text-forest transition-all duration-400 transform hover:-translate-y-0.5">
+                    <span>Découvrir nos produits</span>
+                    <i data-lucide="shopping-bag" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                </a>
+            </div>
+            
+            <div class="flex items-center justify-center gap-8 text-sm text-natural/80">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    <span>12 Rue de l'Horloge, Dinan</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="clock" class="w-4 h-4"></i>
+                    <span>Mardi-Samedi 10h-19h</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Premium Footer -->
+    <footer class="bg-forest text-natural relative overflow-hidden">
+        <!-- Botanical decoration -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M20 50 Q30 30, 50 20 Q70 30, 80 50 Q70 70, 50 80 Q30 70, 20 50\' fill=\'%23ffffff\' fill-opacity=\'0.1\'/%3E%3Cpath d=\'M30 60 Q40 40, 60 30 Q80 40, 90 60 Q80 80, 60 90 Q40 80, 30 60\' fill=\'%23ffffff\' fill-opacity=\'0.05\'/%3E%3C/svg%3E'); background-size: 200px 200px;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Brand -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="Medias/logo.png" alt="Le Jardin des Colibris - Herboristerie de Dinan" class="w-12 h-12 rounded-full object-cover">
+                        <span class="font-allura text-2xl text-natural">Le Jardin des Colibris</span>
+                    </div>
+                    <p class="text-sm text-natural/80 leading-relaxed">
+                        Herboristerie artisanale au cœur de Dinan. 
+                        Découvrez les bienfaits des plantes médicinales et retrouvez l'équilibre naturellement.
+                    </p>
+                    <div class="flex items-center gap-3 text-sm text-natural/70">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        <span>Dinan, Bretagne</span>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <div>
+                    <h4 class="font-bold text-natural mb-6 font-allura text-xl">Navigation</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-chamomile transition-colors duration-300">Accueil</a></li>
+                        <li><a href="boutique.html" class="hover:text-chamomile transition-colors duration-300">Herboristerie</a></li>
+                        <li><a href="plantes-tisanes.html" class="hover:text-chamomile transition-colors duration-300">Plantes Médicinales</a></li>
+                        <li><a href="plantes-tisanes.html#tisanes" class="hover:text-chamomile transition-colors duration-300">Tisanes Bien-être</a></li>
+                        <li><a href="conseils.html" class="hover:text-chamomile transition-colors duration-300">Conseils Naturels</a></li>
+                        <li><a href="apropos.html" class="hover:text-chamomile transition-colors duration-300">À propos</a></li>
+                        <li><a href="contact.html" class="hover:text-chamomile transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-bold text-natural mb-6 font-allura text-xl">Contact</h4>
+                    <div class="space-y-3 text-sm text-natural/80">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-chamomile"></i>
+                            <span>12 Rue de l'Horloge<br>22100 Dinan</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-chamomile"></i>
+                            <span>02 96 39 00 00</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-chamomile"></i>
+                            <span>contact@jardindescolibris.fr</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="clock" class="w-4 h-4 text-chamomile"></i>
+                            <span>Mar-Sam: 10h-19h<br>Dim-Lun: Fermé</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Newsletter & Social -->
+                <div>
+                    <h4 class="font-bold text-natural mb-6 font-allura text-xl">Restez connecté</h4>
+                    
+                    <!-- Newsletter -->
+                    <div class="mb-6">
+                        <p class="text-sm text-natural/80 mb-3">Recevez nos conseils bien-être</p>
+                        <div class="flex gap-2">
+                            <input type="email" placeholder="Votre email" class="flex-1 px-3 py-2 bg-natural/20 border border-natural/30 rounded-lg text-natural placeholder-natural/60 text-sm focus:outline-none focus:border-chamomile">
+                            <button class="bg-chamomile text-forest px-4 py-2 rounded-lg hover:bg-yellow-400 transition-colors font-medium text-sm">
+                                OK
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Social -->
+                    <div>
+                        <p class="text-sm text-natural/80 mb-3">Suivez-nous</p>
+                        <div class="flex gap-3">
+                            <a href="#" class="w-10 h-10 rounded-full bg-natural/20 flex items-center justify-center hover:bg-chamomile hover:text-forest transition-all duration-300 transform hover:scale-110">
+                                <i data-lucide="facebook" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-natural/20 flex items-center justify-center hover:bg-chamomile hover:text-forest transition-all duration-300 transform hover:scale-110">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-natural/20 flex items-center justify-center hover:bg-chamomile hover:text-forest transition-all duration-300 transform hover:scale-110">
+                                <i data-lucide="twitter" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom -->
+            <div class="border-t border-natural/20 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-sm text-natural/60">
+                        &copy; 2024 Le Jardin des Colibris - Herboristerie Artisanale à Dinan. Tous droits réservés.
+                    </p>
+                    <div class="flex gap-6 text-sm text-natural/60">
+                        <a href="mentions-legales.html" class="hover:text-chamomile transition-colors duration-300">Mentions légales</a>
+                        <a href="politique-confidentialite.html" class="hover:text-chamomile transition-colors duration-300">Politique de confidentialité</a>
+                        <a href="cgv.html" class="hover:text-chamomile transition-colors duration-300">CGV</a>
+                        <a href="admin/login.html" class="hover:text-chamomile transition-colors duration-300 opacity-70 hover:opacity-100">Administration</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Premium JavaScript -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile menu toggle with animation
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbar = document.getElementById('navbar');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.classList.toggle('text-sage');
+        });
+        
+        // Close mobile menu when clicking on a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.classList.remove('text-sage');
+            });
+        });
+        
+        // Enhanced navbar scroll effect
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.classList.add('shadow-lg', 'bg-natural/98');
+                navbar.classList.remove('bg-natural/95');
+            } else {
+                navbar.classList.remove('shadow-lg');
+                navbar.classList.add('bg-natural/95');
+                navbar.classList.remove('bg-natural/98');
+            }
+            
+            lastScroll = currentScroll;
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add fade-in animation to elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Add parallax effect to floating elements
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.parallax-bg');
+            
+            parallaxElements.forEach(element => {
+                const speed = 0.5;
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translateY(${yPos}px)`;
+            });
+        });
+        
+        // Newsletter form handling
+        const newsletterForm = document.querySelector('input[type="email"]');
+        const newsletterButton = newsletterForm?.nextElementSibling;
+        
+        if (newsletterButton) {
+            newsletterButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                const email = newsletterForm.value;
+                if (email && email.includes('@')) {
+                    // Show success message
+                    newsletterForm.value = '';
+                    newsletterButton.textContent = 'Inscrit !';
+                    newsletterButton.classList.add('bg-leaf');
+                    
+                    setTimeout(() => {
+                        newsletterButton.textContent = 'OK';
+                        newsletterButton.classList.remove('bg-leaf');
+                    }, 2000);
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

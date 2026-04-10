@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commandes - Le Jardin des Colibris</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Alice&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest: #4F6F5E;
+            --sage: #8FAF9B;
+            --leaf: #A89BC7;
+            --chamomile: #E7C86E;
+            --flower: #E8B4B8;
+            --lavender: #C8B6DB;
+            --natural: #F5F5F0;
+            --soft-gray: #6B7280;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--natural);
+        }
+
+        .font-allura {
+            font-family: 'Allura', cursive;
+        }
+
+        .font-alice {
+            font-family: 'Alice', serif;
+        }
+
+        .sidebar-item {
+            transition: all 0.2s ease;
+        }
+
+        .sidebar-item:hover {
+            background: rgba(143, 175, 155, 0.1);
+            border-left: 3px solid #8FAF9B;
+        }
+
+        .sidebar-item.active {
+            background: rgba(143, 175, 155, 0.15);
+            border-left: 3px solid #4F6F5E;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(143, 175, 155, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-natural">
+    <!-- Authentication Check -->
+    <script>
+        // Simple authentication check
+        if (sessionStorage.getItem('adminAuthenticated') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+    
+    <!-- Main Container -->
+    <div class="flex h-screen">
+        
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white shadow-lg border-r border-sage/20">
+            <div class="p-6">
+                <!-- Logo -->
+                <div class="flex items-center gap-3 mb-8">
+                    <img src="../Medias/logo.png" alt="Le Jardin des Colibris" class="w-10 h-10">
+                    <div>
+                        <h1 class="font-allura text-xl text-forest">Le Jardin des Colibris</h1>
+                    </div>
+                </div>
+                
+                <!-- User Info -->
+                <div class="glass-effect rounded-lg p-4 mb-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-sage/20 rounded-full flex items-center justify-center">
+                            <i data-lucide="user" class="w-5 h-5 text-forest"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-forest text-sm">Tableau de bord</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="space-y-1">
+                    <a href="dashboard.html" class="sidebar-item flex items-center gap-3 px-3 py-2 rounded-lg text-forest">
+                        <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+                        <span>Tableau de bord</span>
+                    </a>
+                    <a href="products.html" class="sidebar-item flex items-center gap-3 px-3 py-2 rounded-lg text-forest">
+                        <i data-lucide="package" class="w-5 h-5"></i>
+                        <span>Produits</span>
+                        <span id="productsBadge" class="ml-auto bg-chamomile/20 text-chamomile px-2 py-1 rounded-full text-xs font-medium">12</span>
+                    </a>
+                    <a href="stock.html" class="sidebar-item flex items-center gap-3 px-3 py-2 rounded-lg text-forest">
+                        <i data-lucide="warehouse" class="w-5 h-5"></i>
+                        <span>Stocks</span>
+                        <span id="stockBadge" class="ml-auto bg-flower/20 text-flower px-2 py-1 rounded-full text-xs font-medium">1</span>
+                    </a>
+                    <a href="orders.html" class="sidebar-item active flex items-center gap-3 px-3 py-2 rounded-lg text-forest">
+                        <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                        <span>Commandes</span>
+                        <span id="ordersBadge" class="ml-auto bg-leaf/20 text-leaf px-2 py-1 rounded-full text-xs font-medium">6</span>
+                    </a>
+                    <a href="blog.html" class="sidebar-item flex items-center gap-3 px-3 py-2 rounded-lg text-forest">
+                        <i data-lucide="file-text" class="w-5 h-5"></i>
+                        <span>Articles</span>
+                    </a>
+                    <a href="customers.html" class="sidebar-item flex items-center gap-3 px-3 py-2 rounded-lg text-forest">
+                        <i data-lucide="users" class="w-5 h-5"></i>
+                        <span>Clients</span>
+                    </a>
+                    <div class="border-t border-sage/20 pt-4 mt-4">
+                        <a href="analytics.html" class="sidebar-item flex items-center gap-3 px-3 py-2 rounded-lg text-forest">
+                            <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                            <span>Statistiques</span>
+                        </a>
+                        <a href="settings.html" class="sidebar-item flex items-center gap-3 px-3 py-2 rounded-lg text-forest">
+                            <i data-lucide="settings" class="w-5 h-5"></i>
+                            <span>Paramètres</span>
+                        </a>
+                    </div>
+                </nav>
+                
+                <!-- Logout -->
+                <div class="absolute bottom-6 left-6 right-6">
+                    <button id="logoutBtn" class="w-full bg-flower/10 text-flower px-4 py-2 rounded-lg hover:bg-flower/20 transition-colors flex items-center justify-center gap-2">
+                        <i data-lucide="log-out" class="w-4 h-4"></i>
+                        <span>Déconnexion</span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto">
+            <!-- Header -->
+            <header class="bg-white shadow-sm border-b border-sage/20 sticky top-0 z-10">
+                <div class="px-6 py-4">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h1 class="text-2xl font-bold text-forest">Commandes</h1>
+                            <p class="text-sm text-soft-gray">Gestion des commandes clients</p>
+                        </div>
+                        
+                        <div class="flex items-center gap-4">
+                            <!-- User Info -->
+                            <div class="flex items-center gap-2 text-sm">
+                                <i data-lucide="user" class="w-4 h-4 text-forest"></i>
+                                <span class="text-sm font-medium text-forest" id="userEmail">Admin</span>
+                            </div>
+                            
+                            <!-- Notifications -->
+                            <button class="relative p-2 text-soft-gray hover:text-forest transition-colors">
+                                <i data-lucide="bell" class="w-5 h-5"></i>
+                                <span class="absolute top-1 right-1 w-2 h-2 bg-flower rounded-full notification-badge"></span>
+                            </button>
+                            
+                            <!-- Date/Time -->
+                            <div class="text-right">
+                                <p class="text-sm font-medium text-forest" id="currentDate"></p>
+                                <p class="text-xs text-soft-gray" id="currentTime"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Content -->
+            <div class="p-6">
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-forest/20 rounded-lg flex items-center justify-center">
+                                <i data-lucide="shopping-cart" class="w-6 h-6 text-forest"></i>
+                            </div>
+                            <span class="text-xs text-leaf font-medium">+12%</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-forest">6</h3>
+                        <p class="text-sm text-soft-gray">Total commandes</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-chamomile/20 rounded-lg flex items-center justify-center">
+                                <i data-lucide="clock" class="w-6 h-6 text-forest"></i>
+                            </div>
+                            <span class="text-xs text-leaf font-medium">+8%</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-forest">2</h3>
+                        <p class="text-sm text-soft-gray">En attente</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-leaf/20 rounded-lg flex items-center justify-center">
+                                <i data-lucide="truck" class="w-6 h-6 text-forest"></i>
+                            </div>
+                            <span class="text-xs text-leaf font-medium">+15%</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-forest">1</h3>
+                        <p class="text-sm text-soft-gray">Expédiées</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-lavender/20 rounded-lg flex items-center justify-center">
+                                <i data-lucide="trending-up" class="w-6 h-6 text-forest"></i>
+                            </div>
+                            <span class="text-xs text-leaf font-medium">+23%</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-forest">€156.80</h3>
+                        <p class="text-sm text-soft-gray">Panier moyen</p>
+                    </div>
+                </div>
+                
+                <!-- Filters -->
+                <div class="bg-white rounded-xl p-4 shadow-lg mb-6">
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <div class="flex-1 min-w-64">
+                            <input type="text" id="orderSearch" placeholder="Rechercher une commande..." 
+                                   class="w-full px-4 py-2 border border-sage/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest">
+                        </div>
+                        <select id="statusFilter" class="px-4 py-2 border border-sage/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest">
+                            <option value="">Tous les statuts</option>
+                            <option value="pending">En attente</option>
+                            <option value="processing">En traitement</option>
+                            <option value="shipped">Expédiée</option>
+                            <option value="delivered">Livrée</option>
+                            <option value="cancelled">Annulée</option>
+                        </select>
+                        <select id="dateFilter" class="px-4 py-2 border border-sage/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest">
+                            <option value="">Toutes les dates</option>
+                            <option value="today">Aujourd'hui</option>
+                            <option value="week">Cette semaine</option>
+                            <option value="month">Ce mois</option>
+                        </select>
+                        <button id="exportBtn" class="px-4 py-2 bg-forest text-natural rounded-lg hover:bg-forest/90 transition-colors flex items-center gap-2">
+                            <i data-lucide="download" class="w-4 h-4"></i>
+                            Exporter
+                        </button>
+                        <button id="addOrderBtn" class="px-4 py-2 bg-leaf text-natural rounded-lg hover:bg-leaf/90 transition-colors flex items-center gap-2">
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                            Ajouter
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Orders Table -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-sage/10">
+                                <tr>
+                                    <th class="text-left py-3 px-4 text-sm font-medium text-forest">Commande</th>
+                                    <th class="text-left py-3 px-4 text-sm font-medium text-forest">Client</th>
+                                    <th class="text-left py-3 px-4 text-sm font-medium text-forest">Articles</th>
+                                    <th class="text-left py-3 px-4 text-sm font-medium text-forest">Total</th>
+                                    <th class="text-left py-3 px-4 text-sm font-medium text-forest">Statut</th>
+                                    <th class="text-left py-3 px-4 text-sm font-medium text-forest">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ordersTableBody">
+                                <!-- Orders will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Order Details Modal -->
+    <div id="orderModal" class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 hidden z-50">
+        <div class="bg-white rounded-2xl p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold text-forest">Détails de la commande</h3>
+                <button id="closeModal" class="text-soft-gray hover:text-forest">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <div id="orderDetails" class="space-y-6">
+                <!-- Order details will be loaded here -->
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Sample orders data
+        let orders = [
+            {
+                id: 'CMD-2024-089',
+                customer: {
+                    name: 'Marie Laurent',
+                    email: 'marie.laurent@email.com',
+                    phone: '06 12 34 56 78'
+                },
+                date: '2024-03-10',
+                status: 'pending',
+                total: 89.50,
+                items: [
+                    { name: 'Tisane Digestion Légère', quantity: 2, price: 12.90 },
+                    { name: 'Camomille Bio', quantity: 1, price: 8.50 }
+                ],
+                payment: 'Carte bancaire',
+                shipping: 'Colissimo'
+            },
+            {
+                id: 'CMD-2024-090',
+                customer: {
+                    name: 'Thomas Martin',
+                    email: 'thomas.martin@email.com',
+                    phone: '07 89 12 34 56'
+                },
+                date: '2024-03-09',
+                status: 'processing',
+                total: 156.80,
+                items: [
+                    { name: 'Complément Immunité Hiver', quantity: 1, price: 24.90 },
+                    { name: 'Huile Relaxante Lavande', quantity: 2, price: 18.90 },
+                    { name: 'Tisane Nuit Paisible', quantity: 3, price: 14.50 }
+                ],
+                payment: 'PayPal',
+                shipping: 'Chronopost'
+            },
+            {
+                id: 'CMD-2024-091',
+                customer: {
+                    name: 'Sophie Dubois',
+                    email: 'sophie.dubois@email.com',
+                    phone: '06 45 78 90 12'
+                },
+                date: '2024-03-08',
+                status: 'shipped',
+                total: 67.40,
+                items: [
+                    { name: 'Millepertuis Bio', quantity: 2, price: 9.90 },
+                    { name: 'Gélules Articulations', quantity: 1, price: 28.50 },
+                    { name: 'Baume du Jardin', quantity: 1, price: 15.90 }
+                ],
+                payment: 'Carte bancaire',
+                shipping: 'Colissimo'
+            },
+            {
+                id: 'CMD-2024-092',
+                customer: {
+                    name: 'Jean Bernard',
+                    email: 'jean.bernard@email.com',
+                    phone: '06 23 45 67 89'
+                },
+                date: '2024-03-07',
+                status: 'delivered',
+                total: 234.50,
+                items: [
+                    { name: 'Tisane Tonus Vitalité', quantity: 4, price: 13.90 },
+                    { name: 'Romarin Bio', quantity: 3, price: 7.50 },
+                    { name: 'Probiotiques Intestinaux', quantity: 2, price: 32.90 }
+                ],
+                payment: 'Carte bancaire',
+                shipping: 'Chronopost'
+            },
+            {
+                id: 'CMD-2024-093',
+                customer: {
+                    name: 'Claire Petit',
+                    email: 'claire.petit@email.com',
+                    phone: '06 78 90 12 34'
+                },
+                date: '2024-03-06',
+                status: 'cancelled',
+                total: 45.80,
+                items: [
+                    { name: 'Sérum Visage Hydratant', quantity: 2, price: 22.90 }
+                ],
+                payment: 'PayPal',
+                shipping: 'Colissimo'
+            },
+            {
+                id: 'CMD-2024-094',
+                customer: {
+                    name: 'Michel Robert',
+                    email: 'michel.robert@email.com',
+                    phone: '06 56 78 90 12'
+                },
+                date: '2024-03-05',
+                status: 'pending',
+                total: 178.60,
+                items: [
+                    { name: 'Tisane Digestion Légère', quantity: 3, price: 12.90 },
+                    { name: 'Huile Relaxante Lavande', quantity: 2, price: 18.90 },
+                    { name: 'Gélules Articulations', quantity: 1, price: 28.50 }
+                ],
+                payment: 'Carte bancaire',
+                shipping: 'Chronopost'
+            }
+        ];
+        
+        // Save orders to localStorage
+        function saveOrdersToStorage() {
+            localStorage.setItem('orders', JSON.stringify(orders));
+        }
+        
+        // Set user email from session
+        const userEmail = sessionStorage.getItem('adminEmail');
+        if (userEmail) {
+            document.getElementById('userEmail').textContent = userEmail;
+        }
+        
+        // Logout functionality
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            sessionStorage.removeItem('adminAuthenticated');
+            sessionStorage.removeItem('adminEmail');
+            window.location.href = '../index.html';
+        });
+        
+        // Render orders table
+        function renderOrders(filteredOrders = orders) {
+            const tbody = document.getElementById('ordersTableBody');
+            tbody.innerHTML = '';
+            
+            filteredOrders.forEach(order => {
+                const row = document.createElement('tr');
+                row.className = 'border-b border-sage/10 hover:bg-sage/5';
+                
+                const statusClass = {
+                    pending: 'bg-chamomile/10 text-chamomile',
+                    processing: 'bg-leaf/10 text-leaf',
+                    shipped: 'bg-sage/10 text-sage',
+                    delivered: 'bg-forest/10 text-forest',
+                    cancelled: 'bg-flower/10 text-flower'
+                };
+                
+                const statusText = {
+                    pending: 'En attente',
+                    processing: 'En traitement',
+                    shipped: 'Expédiée',
+                    delivered: 'Livrée',
+                    cancelled: 'Annulée'
+                };
+                
+                row.innerHTML = `
+                    <td class="py-3 px-4">
+                        <div class="font-medium text-forest">${order.id}</div>
+                        <div class="text-sm text-soft-gray">${order.date}</div>
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="font-medium text-forest">${order.customer.name}</div>
+                        <div class="text-sm text-soft-gray">${order.customer.email}</div>
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="font-medium text-forest">${order.items.length} article(s)</div>
+                        <div class="text-sm text-soft-gray">${order.payment}</div>
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="font-bold text-forest">${order.total.toFixed(2)}€</div>
+                        <div class="text-sm text-soft-gray">${order.shipping}</div>
+                    </td>
+                    <td class="py-3 px-4">
+                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${statusClass[order.status]}">
+                            ${statusText[order.status]}
+                        </span>
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="flex gap-2">
+                            <button onclick="viewOrderDetails('${order.id}')" 
+                                    class="p-1 text-sage hover:text-forest">
+                                <i data-lucide="eye" class="w-4 h-4"></i>
+                            </button>
+                            <button onclick="updateOrderStatus('${order.id}')" 
+                                    class="p-1 text-soft-gray hover:text-forest">
+                                <i data-lucide="edit" class="w-4 h-4"></i>
+                            </button>
+                            <button onclick="printOrder('${order.id}')" 
+                                    class="p-1 text-soft-gray hover:text-forest">
+                                <i data-lucide="printer" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </td>
+                `;
+                
+                tbody.appendChild(row);
+            });
+            
+            lucide.createIcons();
+        }
+        
+        // View order details
+        function viewOrderDetails(orderId) {
+            const order = orders.find(o => o.id === orderId);
+            if (!order) return;
+            
+            const modal = document.getElementById('orderModal');
+            const details = document.getElementById('orderDetails');
+            
+            details.innerHTML = `
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold text-forest mb-4">Informations commande</h4>
+                        <div class="space-y-2 text-sm">
+                            <p><strong>N° Commande:</strong> ${order.id}</p>
+                            <p><strong>Date:</strong> ${order.date}</p>
+                            <p><strong>Statut:</strong> ${order.status}</p>
+                            <p><strong>Paiement:</strong> ${order.payment}</p>
+                            <p><strong>Livraison:</strong> ${order.shipping}</p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold text-forest mb-4">Informations client</h4>
+                        <div class="space-y-2 text-sm">
+                            <p><strong>Nom:</strong> ${order.customer.name}</p>
+                            <p><strong>Email:</strong> ${order.customer.email}</p>
+                            <p><strong>Téléphone:</strong> ${order.customer.phone}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6">
+                    <h4 class="font-semibold text-forest mb-4">Articles commandés</h4>
+                    <div class="border rounded-lg overflow-hidden">
+                        <table class="w-full">
+                            <thead class="bg-sage/10">
+                                <tr>
+                                    <th class="text-left py-2 px-4 text-sm font-medium text-forest">Article</th>
+                                    <th class="text-center py-2 px-4 text-sm font-medium text-forest">Quantité</th>
+                                    <th class="text-right py-2 px-4 text-sm font-medium text-forest">Prix</th>
+                                    <th class="text-right py-2 px-4 text-sm font-medium text-forest">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${order.items.map(item => `
+                                    <tr class="border-b border-sage/10">
+                                        <td class="py-2 px-4 text-sm">${item.name}</td>
+                                        <td class="py-2 px-4 text-sm text-center">${item.quantity}</td>
+                                        <td class="py-2 px-4 text-sm text-right">${item.price.toFixed(2)}€</td>
+                                        <td class="py-2 px-4 text-sm text-right font-medium">${(item.quantity * item.price).toFixed(2)}€</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                            <tfoot class="bg-sage/5">
+                                <tr>
+                                    <td colspan="3" class="py-2 px-4 text-sm font-medium text-forest">Total</td>
+                                    <td class="py-2 px-4 text-sm text-right font-bold text-forest">${order.total.toFixed(2)}€</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+        }
+        
+        // Update order status
+        function updateOrderStatus(orderId) {
+            const order = orders.find(o => o.id === orderId);
+            if (!order) return;
+            
+            const statusOptions = ['pending', 'processing', 'shipped', 'delivered', 'cancelled'];
+            const currentStatusIndex = statusOptions.indexOf(order.status);
+            const newStatus = statusOptions[(currentStatusIndex + 1) % statusOptions.length];
+            
+            if (newStatus && statusOptions.includes(newStatus)) {
+                order.status = newStatus;
+                renderOrders();
+                showNotification('Statut de la commande mis à jour', 'success');
+            }
+        }
+        
+        // Print order
+        function printOrder(orderId) {
+            const order = orders.find(o => o.id === orderId);
+            if (!order) return;
+            
+            const printContent = `
+                <div style="padding: 20px; font-family: Arial, sans-serif;">
+                    <h2>Commande ${order.id}</h2>
+                    <p><strong>Date:</strong> ${order.date}</p>
+                    <p><strong>Client:</strong> ${order.customer.name}</p>
+                    <p><strong>Email:</strong> ${order.customer.email}</p>
+                    <p><strong>Téléphone:</strong> ${order.customer.phone}</p>
+                    <hr style="margin: 20px 0;">
+                    <h3>Articles</h3>
+                    ${order.items.map(item => `
+                        <p>${item.quantity}x ${item.name} - ${(item.quantity * item.price).toFixed(2)}€</p>
+                    `).join('')}
+                    <hr style="margin: 20px 0;">
+                    <p><strong>Total: ${order.total.toFixed(2)}€</strong></p>
+                </div>
+            `;
+            
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(printContent);
+            printWindow.document.close();
+            printWindow.print();
+        }
+        
+        // Filter orders
+        function filterOrders() {
+            const searchTerm = document.getElementById('orderSearch').value.toLowerCase();
+            const statusFilter = document.getElementById('statusFilter').value;
+            const dateFilter = document.getElementById('dateFilter').value;
+            
+            const filtered = orders.filter(order => {
+                const matchesSearch = order.id.toLowerCase().includes(searchTerm) || 
+                                   order.customer.name.toLowerCase().includes(searchTerm) ||
+                                   order.customer.email.toLowerCase().includes(searchTerm);
+                const matchesStatus = !statusFilter || order.status === statusFilter;
+                
+                let matchesDate = true;
+                if (dateFilter === 'today') {
+                    matchesDate = order.date === new Date().toISOString().split('T')[0];
+                } else if (dateFilter === 'week') {
+                    const orderDate = new Date(order.date);
+                    const weekAgo = new Date();
+                    weekAgo.setDate(weekAgo.getDate() - 7);
+                    matchesDate = orderDate >= weekAgo;
+                } else if (dateFilter === 'month') {
+                    const orderDate = new Date(order.date);
+                    const monthAgo = new Date();
+                    monthAgo.setMonth(monthAgo.getMonth() - 1);
+                    matchesDate = orderDate >= monthAgo;
+                }
+                
+                return matchesSearch && matchesStatus && matchesDate;
+            });
+            
+            renderOrders(filtered);
+        }
+        
+        // Event listeners
+        document.getElementById('orderSearch').addEventListener('input', filterOrders);
+        document.getElementById('statusFilter').addEventListener('change', filterOrders);
+        document.getElementById('dateFilter').addEventListener('change', filterOrders);
+        
+        // Export functionality
+        document.getElementById('exportBtn').addEventListener('click', () => {
+            const csvContent = [
+                ['ID', 'Client', 'Email', 'Date', 'Statut', 'Total', 'Paiement', 'Livraison'],
+                ...orders.map(order => [
+                    order.id,
+                    order.customer.name,
+                    order.customer.email,
+                    order.date,
+                    order.status,
+                    order.total.toFixed(2),
+                    order.payment,
+                    order.shipping
+                ])
+            ].map(row => row.join(',')).join('\n');
+            
+            const blob = new Blob([csvContent], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `commandes_${new Date().toISOString().split('T')[0]}.csv`;
+            a.click();
+            window.URL.revokeObjectURL(url);
+            
+            showNotification('Commandes exportées avec succès', 'success');
+        });
+        
+        // Add order functionality
+        document.getElementById('addOrderBtn').addEventListener('click', () => {
+            alert('Fonction d\'ajout de commande - À implémenter');
+        });
+        
+        // Close modal
+        document.getElementById('closeModal').addEventListener('click', () => {
+            document.getElementById('orderModal').classList.add('hidden');
+        });
+        
+        // Notification system
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 ${
+                type === 'success' ? 'bg-leaf text-natural' : 
+                type === 'error' ? 'bg-flower text-natural' : 
+                'bg-forest text-natural'
+            }`;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+        
+        // Sync badges with dashboard
+        function syncBadges() {
+            const productsData = JSON.parse(localStorage.getItem('products') || '[]');
+            const stockData = JSON.parse(localStorage.getItem('stock') || '[]');
+            const ordersData = JSON.parse(localStorage.getItem('orders') || '[]');
+            
+            const productsBadge = document.getElementById('productsBadge');
+            const stockBadge = document.getElementById('stockBadge');
+            const ordersBadge = document.getElementById('ordersBadge');
+            
+            if (productsBadge) productsBadge.textContent = productsData.length;
+            if (stockBadge) stockBadge.textContent = stockData.filter(s => s.currentStock <= s.alertThreshold).length;
+            if (ordersBadge) ordersBadge.textContent = ordersData.length;
+        }
+        
+        // Initial render
+        renderOrders();
+        saveOrdersToStorage();
+        syncBadges();
+        
+        // Auto-sync every 30 seconds
+        setInterval(syncBadges, 30000);
+        
+        // Auto-refresh every 30 seconds
+        setInterval(() => {
+            renderOrders();
+        }, 30000);
+    </script>
+</body>
+</html>

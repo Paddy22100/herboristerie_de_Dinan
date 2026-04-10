@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Connexion - Admin Le Jardin des Colibris</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Alice&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sage': '#8FAF9B',
+                        'forest': '#4F6F5E',
+                        'leaf': '#6F8F6B',
+                        'lavender': '#A89BC7',
+                        'flower': '#E6A5A5',
+                        'chamomile': '#E7C86E',
+                        'natural': '#F7F6F2',
+                        'botanical': '#E8E2D7',
+                        'soft-gray': '#6B6B6B'
+                    },
+                    fontFamily: {
+                        'allura': ['Allura', 'cursive'],
+                        'alice': ['Alice', 'serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #F7F6F2 0%, #E8E2D7 100%);
+        }
+        
+        .font-allura {
+            font-family: 'Allura', cursive;
+        }
+        
+        .font-alice {
+            font-family: 'Alice', serif;
+        }
+        
+        .watercolor-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.3443 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%238FAF9B' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(143, 175, 155, 0.2);
+        }
+    </style>
+</head>
+<body class="watercolor-bg min-h-screen flex items-center justify-center p-4">
+    
+    <!-- Background decoration -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute top-20 right-0 w-96 h-96 bg-sage/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-0 w-72 h-72 bg-lavender/20 rounded-full blur-3xl"></div>
+    </div>
+    
+    <!-- Login Container -->
+    <div class="relative z-10 w-full max-w-md">
+        <!-- Logo and Title -->
+        <div class="text-center mb-8">
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <img src="../Medias/logo.png" alt="Le Jardin des Colibris" class="w-12 h-12">
+                <h1 class="font-allura text-3xl text-forest">Le Jardin des Colibris</h1>
+            </div>
+            <p class="text-soft-gray font-medium">Espace Administrateur</p>
+        </div>
+        
+        <!-- Login Form -->
+        <div class="glass-effect rounded-2xl p-8 shadow-2xl">
+            <form id="loginForm" class="space-y-6">
+                <!-- Email Field -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-forest mb-2">
+                        Adresse email
+                    </label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i data-lucide="mail" class="w-5 h-5 text-soft-gray"></i>
+                        </div>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            class="w-full pl-10 pr-3 py-3 border border-sage/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest focus:border-transparent bg-white/70"
+                            placeholder="votre@email.com"
+                        >
+                    </div>
+                </div>
+                
+                <!-- Password Field -->
+                <div>
+                    <label for="password" class="block text-sm font-medium text-forest mb-2">
+                        Mot de passe
+                    </label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i data-lucide="lock" class="w-5 h-5 text-soft-gray"></i>
+                        </div>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            required
+                            class="w-full pl-10 pr-12 py-3 border border-sage/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest focus:border-transparent bg-white/70"
+                            placeholder="••••••••"
+                        >
+                        <button 
+                            type="button" 
+                            id="togglePassword"
+                            class="absolute inset-y-0 right-0 pr-3 flex items-center"
+                        >
+                            <i data-lucide="eye" class="w-5 h-5 text-soft-gray hover:text-forest cursor-pointer"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Remember Me -->
+                <div class="flex items-center">
+                    <input 
+                        type="checkbox" 
+                        id="remember" 
+                        name="remember" 
+                        class="h-4 w-4 text-forest focus:ring-forest border-sage/30 rounded"
+                    >
+                    <label for="remember" class="ml-2 text-sm text-soft-gray">
+                        Se souvenir de moi
+                    </label>
+                </div>
+                
+                <!-- Submit Button -->
+                <button 
+                    type="submit" 
+                    class="w-full bg-forest text-natural py-3 rounded-lg hover:bg-leaf transition-colors duration-200 font-medium shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                >
+                    <span>Se connecter</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+                
+                <!-- Error Message -->
+                <div id="errorMessage" class="hidden bg-flower/10 border border-flower/30 text-soft-gray px-4 py-3 rounded-lg text-sm">
+                    Email ou mot de passe incorrect
+                </div>
+            </form>
+            
+            <!-- Footer -->
+            <div class="mt-6 text-center">
+                <p class="text-xs text-soft-gray">
+                    Accès réservé aux administrateurs du site
+                </p>
+                <a href="../index.html" class="text-xs text-forest hover:text-leaf transition-colors">
+                    ← Retour au site
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Toggle password visibility
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+        
+        togglePassword.addEventListener('click', () => {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            
+            const icon = togglePassword.querySelector('i');
+            if (type === 'text') {
+                icon.setAttribute('data-lucide', 'eye-off');
+            } else {
+                icon.setAttribute('data-lucide', 'eye');
+            }
+            lucide.createIcons();
+        });
+        
+        // Handle form submission
+        const loginForm = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('errorMessage');
+        
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Show loading state
+            const submitButton = loginForm.querySelector('button[type="submit"]');
+            const originalContent = submitButton.innerHTML;
+            submitButton.innerHTML = '<span class="animate-pulse">Connexion en cours...</span>';
+            submitButton.disabled = true;
+            
+            try {
+                // Simulate authentication (replace with real authentication)
+                await simulateAuthentication(email, password);
+                
+                // Store session
+                sessionStorage.setItem('adminAuthenticated', 'true');
+                sessionStorage.setItem('adminEmail', email);
+                
+                // Redirect to dashboard
+                window.location.href = 'dashboard.html';
+                
+            } catch (error) {
+                // Show error message
+                errorMessage.classList.remove('hidden');
+                submitButton.innerHTML = originalContent;
+                submitButton.disabled = false;
+                
+                // Hide error after 5 seconds
+                setTimeout(() => {
+                    errorMessage.classList.add('hidden');
+                }, 5000);
+            }
+        });
+        
+        // Simulate authentication function (replace with real backend call)
+        async function simulateAuthentication(email, password) {
+            // Simulate network delay
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            // Check credentials (replace with real authentication)
+            const validCredentials = [
+                { email: 'celine@jardindescolibris.fr', password: '***REDACTED-CREDENTIAL-REMOVED***' },
+                { email: 'henrieta@jardindescolibris.fr', password: '***REDACTED-CREDENTIAL-REMOVED***' }
+            ];
+            
+            const isValid = validCredentials.some(cred => cred.email === email && cred.password === password);
+            
+            if (!isValid) {
+                throw new Error('Invalid credentials');
+            }
+        }
+        
+        // Check if already authenticated
+        if (sessionStorage.getItem('adminAuthenticated') === 'true') {
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>

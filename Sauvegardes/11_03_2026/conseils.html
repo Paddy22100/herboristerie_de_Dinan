@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conseils en phytothérapie par Céline et Henrieta, herboristes diplômées à Dinan. Découvrez les bienfaits des plantes médicinales, tisanes pour digestion, sommeil, stress et immunité. Articles et guides pratiques.">
+    <meta name="keywords" content="conseils phytothérapie Dinan, plantes médicinales, tisanes bien-être, digestion naturelle, sommeil naturel, anti-stress plantes, immunité plantes, Céline Henrieta herboristes, articles phytothérapie">
+    <title>Conseils Naturels - Le Jardin des Colibris | Herboristerie à Dinan</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Alice&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sage': '#8FAF9B',
+                        'forest': '#4F6F5E',
+                        'leaf': '#6F8F6B',
+                        'lavender': '#A89BC7',
+                        'flower': '#E6A5A5',
+                        'chamomile': '#E7C86E',
+                        'natural': '#F7F6F2',
+                        'botanical': '#E8E2D7',
+                        'soft-gray': '#6B6B6B'
+                    },
+                    fontFamily: {
+                        'allura': ['Allura', 'cursive'],
+                        'alice': ['Alice', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Alice', serif;
+            background-color: #F7F6F2;
+            color: #4F6F5E;
+        }
+        
+        .font-allura {
+            font-family: 'Allura', cursive;
+        }
+        
+        .font-alice {
+            font-family: 'Alice', serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #F7F6F2;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #8FAF9B;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6F8F6B;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+        
+        .float-animation {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .watercolor-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.3443 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%238FAF9B' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(79, 111, 94, 0.15);
+        }
+    </style>
+</head>
+<body class="watercolor-bg antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-natural/90 backdrop-blur-md border-b border-sage/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="Medias/logo.png" alt="Le Jardin des Colibris - Herboristerie de Dinan" class="w-10 h-10">
+                    <div class="flex flex-col">
+                        <span class="font-allura text-2xl text-forest leading-none">Le Jardin des Colibris</span>
+                        <span class="text-xs text-soft-gray tracking-widest uppercase">Herboristerie de Dinan</span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium">Accueil</a>
+                    <a href="boutique.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium">La Boutique</a>
+                    <a href="plantes-tisanes.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium">Plantes & Tisanes</a>
+                    <a href="conseils.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium border-b-2 border-sage">Conseils</a>
+                    <a href="index.html#apropos" class="text-forest hover:text-sage transition-colors duration-200 font-medium">À propos</a>
+                    <a href="contact.html" class="bg-forest text-natural px-6 py-2 rounded-full hover:bg-leaf transition-colors duration-200 shadow-md hover:shadow-lg">Contact</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-forest hover:text-sage focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-natural border-t border-sage/20">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">Accueil</a>
+                <a href="boutique.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">La Boutique</a>
+                <a href="plantes-tisanes.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">Plantes & Tisanes</a>
+                <a href="conseils.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md font-semibold">Conseils</a>
+                <a href="index.html#apropos" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">À propos</a>
+                <a href="contact.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-20 right-0 w-96 h-96 bg-sage/20 rounded-full blur-3xl float-animation"></div>
+            <div class="absolute bottom-20 left-0 w-72 h-72 bg-lavender/20 rounded-full blur-3xl float-animation" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <h1 class="font-allura text-6xl md:text-7xl lg:text-8xl text-forest leading-tight mb-6">
+                    Conseils <span class="text-leaf">Naturels</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-soft-gray font-alice italic max-w-3xl mx-auto">
+                    Découvrez nos articles et conseils pratiques rédigés par Céline et Henrieta, herboristes diplômées. 
+                    Intégrez la phytothérapie dans votre quotidien avec des solutions naturelles 
+                    et efficaces pour votre bien-être.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Articles -->
+    <section class="py-20 bg-white/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-sage font-medium tracking-wider uppercase text-sm">Articles populaires</span>
+                <h2 class="font-allura text-5xl md:text-6xl text-forest mt-2 mb-4">Derniers conseils</h2>
+                <div class="w-24 h-1 bg-chamomile mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-lg border border-sage/10 hover-lift">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/food/640x360/49" alt="Plantes médicinales pour la digestion" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-sm text-sage mb-3">
+                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                            <span>15 janvier 2024</span>
+                            <span>•</span>
+                            <span>5 min de lecture</span>
+                        </div>
+                        <h3 class="font-allura text-2xl text-forest mb-3">Les plantes pour une digestion sereine</h3>
+                        <p class="text-soft-gray text-sm mb-4 line-clamp-3">
+                            Découvrez les meilleures plantes médicinales pour soulager les troubles digestifs : 
+                            menthe poivrée, fenouil, camomille et genévrier. Apprenez à les utiliser efficacement 
+                            pour retrouver un confort digestif au quotidien.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-sage/20 text-sage text-xs rounded-full">Digestion</span>
+                            <span class="px-3 py-1 bg-sage/20 text-sage text-xs rounded-full">Bien-être</span>
+                            <span class="px-3 py-1 bg-sage/20 text-sage text-xs rounded-full">Plantes</span>
+                        </div>
+                        <a href="#article-digestion" class="inline-flex items-center gap-2 text-forest font-medium hover:text-sage transition-colors">
+                            Lire la suite <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Article 2 -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-lg border border-sage/10 hover-lift">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/food/640x360/50" alt="Plantes relaxantes pour le sommeil" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-sm text-sage mb-3">
+                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                            <span>8 janvier 2024</span>
+                            <span>•</span>
+                            <span>6 min de lecture</span>
+                        </div>
+                        <h3 class="font-allura text-2xl text-forest mb-3">Retrouver le sommeil naturellement</h3>
+                        <p class="text-soft-gray text-sm mb-4 line-clamp-3">
+                            La valériane, la passiflore et le tilleul sont vos alliés pour des nuits paisibles. 
+                            Explorez les différentes approches naturelles pour améliorer la qualité de votre sommeil 
+                            sans effets secondaires.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-lavender/20 text-lavender text-xs rounded-full">Sommeil</span>
+                            <span class="px-3 py-1 bg-lavender/20 text-lavender text-xs rounded-full">Relaxation</span>
+                            <span class="px-3 py-1 bg-lavender/20 text-lavender text-xs rounded-full">Tisanes</span>
+                        </div>
+                        <a href="#article-sommeil" class="inline-flex items-center gap-2 text-forest font-medium hover:text-sage transition-colors">
+                            Lire la suite <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Article 3 -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-lg border border-sage/10 hover-lift">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/food/640x360/51" alt="Préparation d'infusions de plantes médicinales" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-sm text-sage mb-3">
+                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                            <span>2 janvier 2024</span>
+                            <span>•</span>
+                            <span>4 min de lecture</span>
+                        </div>
+                        <h3 class="font-allura text-2xl text-forest mb-3">Comment préparer une infusion parfaite</h3>
+                        <p class="text-soft-gray text-sm mb-4 line-clamp-3">
+                            Température, temps d'infusion, dosage : tous les secrets pour extraire au mieux 
+                            les principes actifs de vos plantes. Guide complet pour des infusions réussies.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-chamomile/30 text-chamomile text-xs rounded-full">Infusions</span>
+                            <span class="px-3 py-1 bg-chamomile/30 text-chamomile text-xs rounded-full">Préparation</span>
+                            <span class="px-3 py-1 bg-chamomile/30 text-chamomile text-xs rounded-full">Conseils</span>
+                        </div>
+                        <a href="#article-infusion" class="inline-flex items-center gap-2 text-forest font-medium hover:text-sage transition-colors">
+                            Lire la suite <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Article 1 -->
+    <section id="article-digestion" class="py-20 bg-natural">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <article class="bg-white rounded-2xl overflow-hidden shadow-lg">
+                <div class="h-64 overflow-hidden">
+                    <img src="http://static.photos/food/800x400/40" alt="Plantes digestives" class="w-full h-full object-cover">
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center gap-2 text-sm text-sage mb-4">
+                        <i data-lucide="calendar" class="w-4 h-4"></i>
+                        <span>15 janvier 2024</span>
+                        <span>•</span>
+                        <span>5 min de lecture</span>
+                        <span>•</span>
+                        <span>Par Céline</span>
+                    </div>
+                    <h1 class="font-allura text-4xl text-forest mb-6">Les plantes pour une digestion sereine</h1>
+                    
+                    <div class="prose prose-lg text-soft-gray space-y-4">
+                        <p>
+                            Les troubles digestifs sont devenus courants dans notre mode de vie moderne. 
+                            Heureusement, la nature nous offre des solutions efficaces et douces pour soulager 
+                            ces maux quotidiens. Découvrez les plantes médicinales qui vont devenir vos alliées digestives.
+                        </p>
+                        
+                        <h2 class="font-allura text-3xl text-forest mt-8 mb-4">La menthe poivrée : le rafraîchissant digestif</h2>
+                        <p>
+                            Riche en menthol, la menthe poivrée est connue pour son action spasmolytique sur 
+                            le système digestif. Elle soulage efficacement les ballonnements, les gaz et les crampes abdominales.
+                        </p>
+                        <div class="bg-sage/10 rounded-lg p-4 my-4">
+                            <p class="text-sm"><strong>Conseil d'utilisation :</strong> Une infusion après les repas principaux, 
+                            1 cuillère à café de feuilles séchées pour 250ml d'eau bouillante, laissez infuser 5-7 minutes.</p>
+                        </div>
+                        
+                        <h2 class="font-allura text-3xl text-forest mt-8 mb-4">Le fenouil : le carminatif naturel</h2>
+                        <p>
+                            Les graines de fenouil contiennent de l'anéthol, une substance qui favorise l'expulsion 
+                            des gaz et réduit les spasmes intestinaux. Idéal après un repas copieux ou en cas de ballonnements.
+                        </p>
+                        
+                        <h2 class="font-allura text-3xl text-forest mt-8 mb-4">La camomille romaine : l'apaisant universel</h2>
+                        <p>
+                            Douce et efficace, la camomille apaise les muqueuses digestives irritées et réduit 
+                            l'inflammation. Elle est particulièrement recommandée en cas de reflux gastrique ou de gastrite.
+                        </p>
+                        
+                        <h2 class="font-allura text-3xl text-forest mt-8 mb-4">Le genévrier : le tonique digestif</h2>
+                        <p>
+                            Les baies de genévrier stimulent la production des sucs digestifs et améliorent 
+                            la digestion des graisses. Attention toutefois à ne pas en abuser : 2-3 baies par infusion suffisent.
+                        </p>
+                        
+                        <div class="bg-forest/10 rounded-lg p-6 my-8">
+                            <h3 class="font-bold text-forest mb-3">Mélange "Digestion Légère"</h3>
+                            <p class="text-sm mb-2">Voici une recette simple à préparer chez vous :</p>
+                            <ul class="text-sm space-y-1">
+                                <li>• 40% de menthe poivrée</li>
+                                <li>• 30% de fenouil en graines</li>
+                                <li>• 20% de camomille romaine</li>
+                                <li>• 10% de réglisse (pour le goût et l'effet protecteur)</li>
+                            </ul>
+                            <p class="text-sm mt-3">1 cuillère à café du mélange pour une tasse, laissez infuser 7 minutes.</p>
+                        </div>
+                        
+                        <h2 class="font-allura text-3xl text-forest mt-8 mb-4">Quand consulter ?</h2>
+                        <p>
+                            Si vos troubles digestifs persistent plus de deux semaines, s'aggravent ou s'accompagnent 
+                            d'autres symptômes (perte de poids, sang dans les selles, etc.), consultez un médecin. 
+                            La phytothérapie est une approche complémentaire qui ne remplace pas un avis médical.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-sage/20">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-sage/20 text-sage text-xs rounded-full">Digestion</span>
+                            <span class="px-3 py-1 bg-sage/20 text-sage text-xs rounded-full">Bien-être</span>
+                            <span class="px-3 py-1 bg-sage/20 text-sage text-xs rounded-full">Plantes</span>
+                            <span class="px-3 py-1 bg-sage/20 text-sage text-xs rounded-full">Phytothérapie</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <a href="plantes-tisanes.html#tisanes" class="inline-flex items-center gap-2 text-forest font-medium hover:text-sage transition-colors">
+                                <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                                Voir nos tisanes digestives
+                            </a>
+                            <a href="contact.html" class="inline-flex items-center gap-2 text-forest font-medium hover:text-sage transition-colors">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                Demander conseil
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- More Articles Preview -->
+    <section class="py-20 bg-white/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-sage font-medium tracking-wider uppercase text-sm">Explorez plus</span>
+                <h2 class="font-allura text-5xl md:text-6xl text-forest mt-2 mb-4">Autres conseils</h2>
+                <div class="w-24 h-1 bg-chamomile mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article 4 -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-lg border border-sage/10 hover-lift">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/nature/640x360/43" alt="Gestion du stress" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-sm text-sage mb-3">
+                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                            <span>20 décembre 2023</span>
+                        </div>
+                        <h3 class="font-allura text-2xl text-forest mb-3">Gérer le stress avec les plantes</h3>
+                        <p class="text-soft-gray text-sm mb-4">
+                            Rhodiola, ashwagandha, adaptogènes : découvrez les plantes qui aident votre corps 
+                            à s'adapter au stress et à retrouver l'équilibre nerveux.
+                        </p>
+                        <a href="#" class="inline-flex items-center gap-2 text-forest font-medium hover:text-sage transition-colors">
+                            Lire la suite <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Article 5 -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-lg border border-sage/10 hover-lift">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/minimal/640x360/44" alt="Immunité naturelle" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-sm text-sage mb-3">
+                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                            <span>15 décembre 2023</span>
+                        </div>
+                        <h3 class="font-allura text-2xl text-forest mb-3">Renforcer son immunité naturellement</h3>
+                        <p class="text-soft-gray text-sm mb-4">
+                            Echinacée, astragale, shiitaké : les alliés de votre système immunitaire 
+                            pour affronter l'hiver et rester en forme toute l'année.
+                        </p>
+                        <a href="#" class="inline-flex items-center gap-2 text-forest font-medium hover:text-sage transition-colors">
+                            Lire la suite <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Article 6 -->
+                <article class="bg-white rounded-2xl overflow-hidden shadow-lg border border-sage/10 hover-lift">
+                    <div class="h-48 overflow-hidden">
+                        <img src="http://static.photos/food/640x360/45" alt="Femme et plantes" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-sm text-sage mb-3">
+                            <i data-lucide="calendar" class="w-4 h-4"></i>
+                            <span>10 décembre 2023</span>
+                        </div>
+                        <h3 class="font-allura text-2xl text-forest mb-3">Les plantes pour la santé féminine</h3>
+                        <p class="text-soft-gray text-sm mb-4">
+                            Sauge, alchémille, framboisier : les plantes qui accompagnent la femme 
+                            à chaque étape de sa vie avec douceur et efficacité.
+                        </p>
+                        <a href="#" class="inline-flex items-center gap-2 text-forest font-medium hover:text-sage transition-colors">
+                            Lire la suite <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-forest text-natural">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-allura text-4xl md:text-5xl mb-6">Recevez les conseils de Céline et Henrieta</h2>
+            <p class="text-lg text-natural/80 mb-8">
+                Inscrivez-vous à notre newsletter pour recevoir chaque mois des conseils phytothérapie 
+                rédigés par Céline et Henrieta, des recettes de tisanes exclusives et des offres spéciales 
+                sur les produits de notre herboristerie à Dinan.
+            </p>
+            <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+                <input type="email" placeholder="Votre email" class="flex-1 px-4 py-3 rounded-full text-forest focus:outline-none focus:ring-2 focus:ring-chamomile">
+                <button type="submit" class="bg-chamomile text-forest px-8 py-3 rounded-full hover:bg-yellow-400 transition-colors font-bold shadow-lg">
+                    S'inscrire
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-natural text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-allura text-4xl md:text-5xl mb-6">Des questions ? Besoin de conseils ?</h2>
+            <p class="text-lg text-soft-gray mb-8">
+                Céline et Henrieta, herboristes diplômées avec plus de 10 ans d'expérience, sont à votre disposition 
+                pour vous accompagner dans votre démarche bien-être avec des solutions naturelles personnalisées. 
+                Consultations à Dinan et en ligne.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-forest text-natural px-8 py-4 rounded-full hover:bg-leaf transition-colors font-bold shadow-lg">
+                    <span>Prendre rendez-vous</span>
+                    <i data-lucide="calendar" class="w-5 h-5"></i>
+                </a>
+                <a href="boutique.html" class="inline-flex items-center justify-center gap-2 border-2 border-forest text-forest px-8 py-4 rounded-full hover:bg-forest hover:text-natural transition-colors">
+                    <span>Voir la boutique</span>
+                    <i data-lucide="store" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-forest text-natural/80 py-12 border-t border-natural/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="leaf" class="w-6 h-6 text-chamomile"></i>
+                        <span class="font-allura text-2xl text-natural">Le Jardin des Colibris</span>
+                    </div>
+                    <p class="text-sm text-natural/60">
+                        Herboristerie traditionnelle à Dinan, Bretagne. 
+                        Plantes médicinales, tisanes et conseils bien-être.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-natural mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-chamomile transition-colors">Accueil</a></li>
+                        <li><a href="boutique.html" class="hover:text-chamomile transition-colors">La Boutique</a></li>
+                        <li><a href="plantes-tisanes.html" class="hover:text-chamomile transition-colors">Plantes & Tisanes</a></li>
+                        <li><a href="conseils.html" class="hover:text-chamomile transition-colors">Conseils</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h4 class="font-bold text-natural mb-4">Informations</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mentions-legales.html" class="hover:text-chamomile transition-colors">Mentions légales</a></li>
+                        <li><a href="politique-confidentialite.html" class="hover:text-chamomile transition-colors">Politique de confidentialité</a></li>
+                        <li><a href="cgv.html" class="hover:text-chamomile transition-colors">CGV</a></li>
+                        <li><a href="admin/login.html" class="hover:text-chamomile transition-colors opacity-70 hover:opacity-100">Administration</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social -->
+                <div>
+                    <h4 class="font-bold text-natural mb-4">Suivez-nous</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-natural/10 flex items-center justify-center hover:bg-chamomile hover:text-forest transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-natural/10 flex items-center justify-center hover:bg-chamomile hover:text-forest transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-natural/10 pt-8 text-center text-sm text-natural/60">
+                <p>&copy; 2024 Le Jardin des Colibris - Herboristerie de Dinan. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
+
+</body>
+</html>

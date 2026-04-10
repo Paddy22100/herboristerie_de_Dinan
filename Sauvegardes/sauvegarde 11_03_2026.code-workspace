@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "Site Internet Le Jardin des Colibris",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501
+	}
+}

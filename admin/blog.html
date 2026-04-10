@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Blog - Admin Le Jardin des Colibris</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Alice&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sage': '#8FAF9B',
+                        'forest': '#4F6F5E',
+                        'leaf': '#6F8F6B',
+                        'lavender': '#A89BC7',
+                        'flower': '#E6A5A5',
+                        'chamomile': '#E7C86E',
+                        'natural': '#F7F6F2',
+                        'botanical': '#E8E2D7',
+                        'soft-gray': '#6B6B6B'
+                    },
+                    fontFamily: {
+                        'allura': ['Allura', 'cursive'],
+                        'alice': ['Alice', 'serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #F7F6F2;
+        }
+        
+        .font-allura {
+            font-family: 'Allura', cursive;
+        }
+        
+        .font-alice {
+            font-family: 'Alice', serif;
+        }
+        
+        .sidebar-item {
+            transition: all 0.2s ease;
+        }
+        
+        .sidebar-item:hover {
+            background: rgba(143, 175, 155, 0.1);
+            border-left: 3px solid #8FAF9B;
+        }
+        
+        .sidebar-item.active {
+            background: rgba(143, 175, 155, 0.15);
+            border-left: 3px solid #4F6F5E;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(143, 175, 155, 0.2);
+        }
+        
+        .editor-toolbar {
+            border-bottom: 1px solid #e5e7eb;
+            background: #f9fafb;
+        }
+        
+        .editor-content {
+            min-height: 300px;
+            border: 1px solid #e5e7eb;
+            border-radius: 0 0 0.5rem 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-natural">
+    <!-- Authentication Check -->
+    <script>
+        // Simple authentication check
+        if (sessionStorage.getItem('adminAuthenticated') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+    
+    <!-- Main Container -->
+    <div class="flex h-screen">
+        
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white shadow-lg border-r border-sage/20">
+            <div class="p-6">
+                <!-- Logo -->
+                <div class="flex items-center gap-3 mb-8">
+                    <img src="../Medias/logo.png" alt="Le Jardin des Colibris" class="w-10 h-10">
+                    <div>
+                        <h1 class="font-allura text-xl text-forest">Le Jardin des Colibris</h1>
+                    </div>
+                </div>
+                
+                <!-- User Info -->
+                <div class="glass-effect rounded-lg p-4 mb-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-sage/20 rounded-full flex items-center justify-center">
+                            <i data-lucide="user" class="w-5 h-5 text-forest"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-forest text-sm">Tableau de bord</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="space-y-1">
+                    <a href="dashboard.html" class="sidebar-item flex items-center gap-3 px-3 py-2 rounded-lg text-forest">
+                        <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+                        <span>Tableau de bord</span>
+                    </a>
+                    <a href="analytics.html" class="sidebar-item flex items-center gap-3 px-3 py-2 rounded-lg text-forest">
+                        <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                        <span>Statistiques</span>
+                    </a>
+                    <a href="products.html" class="sidebar-item flex items-center gap-3 px-3 py-2 rounded-lg text-forest">
+                        <i data-lucide="package" class="w-5 h-5"></i>
+                        <span>Produits</span>
+                    </a>
+                    <a href="stock.html" class="sidebar-item flex items-center gap-3 px-3 py-2 rounded-lg text-forest">
+                        <i data-lucide="warehouse" class="w-5 h-5"></i>
+                        <span>Stocks</span>
+                    </a>
+                    <a href="blog.html" class="sidebar-item active flex items-center gap-3 px-3 py-2 rounded-lg text-forest">
+                        <i data-lucide="file-text" class="w-5 h-5"></i>
+                        <span>Articles</span>
+                    </a>
+                    <a href="orders.html" class="sidebar-item flex items-center gap-3 px-3 py-2 rounded-lg text-forest">
+                        <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                        <span>Commandes</span>
+                    </a>
+                    <a href="users.html" class="sidebar-item flex items-center gap-3 px-3 py-2 rounded-lg text-forest">
+                        <i data-lucide="users" class="w-5 h-5"></i>
+                        <span>Utilisateurs</span>
+                    </a>
+                </nav>
+                
+                <!-- Logout -->
+                <div class="absolute bottom-6 left-6 right-6">
+                    <button id="logoutBtn" class="w-full bg-flower/10 text-flower px-4 py-2 rounded-lg hover:bg-flower/20 transition-colors flex items-center justify-center gap-2">
+                        <i data-lucide="log-out" class="w-4 h-4"></i>
+                        <span>Déconnexion</span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="flex-1 overflow-auto">
+            <!-- Header -->
+            <header class="bg-white shadow-sm border-b border-sage/20">
+                <div class="px-6 py-4 flex items-center justify-between">
+                    <div>
+                        <h2 class="text-2xl font-bold text-forest">Gestion du blog</h2>
+                        <p class="text-sm text-soft-gray">Créez et gérez vos articles de blog</p>
+                    </div>
+                    <button id="addArticleBtn" class="bg-forest text-natural px-4 py-2 rounded-lg hover:bg-leaf transition-colors flex items-center gap-2">
+                        <i data-lucide="plus" class="w-4 h-4"></i>
+                        <span>Nouvel article</span>
+                    </button>
+                </div>
+            </header>
+            
+            <!-- Blog Content -->
+            <div class="p-6">
+                <!-- Stats Overview -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-sage/20 rounded-lg flex items-center justify-center">
+                                <i data-lucide="file-text" class="w-6 h-6 text-forest"></i>
+                            </div>
+                            <span class="text-xs text-soft-gray">+2</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-forest">12</h3>
+                        <p class="text-sm text-soft-gray">Articles publiés</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-leaf/20 rounded-lg flex items-center justify-center">
+                                <i data-lucide="eye" class="w-6 h-6 text-forest"></i>
+                            </div>
+                            <span class="text-xs text-soft-gray">+15%</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-forest">3,456</h3>
+                        <p class="text-sm text-soft-gray">Vues totales</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-chamomile/20 rounded-lg flex items-center justify-center">
+                                <i data-lucide="message-circle" class="w-6 h-6 text-forest"></i>
+                            </div>
+                            <span class="text-xs text-soft-gray">+8</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-forest">89</h3>
+                        <p class="text-sm text-soft-gray">Commentaires</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-lavender/20 rounded-lg flex items-center justify-center">
+                                <i data-lucide="heart" class="w-6 h-6 text-forest"></i>
+                            </div>
+                            <span class="text-xs text-soft-gray">+23%</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-forest">234</h3>
+                        <p class="text-sm text-soft-gray">J'aime</p>
+                    </div>
+                </div>
+                
+                <!-- Filters -->
+                <div class="bg-white rounded-xl p-4 shadow-lg mb-6">
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <div class="flex-1 min-w-64">
+                            <input type="text" id="articleSearch" placeholder="Rechercher un article..." 
+                                   class="w-full px-4 py-2 border border-sage/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest">
+                        </div>
+                        <select id="categoryFilter" class="px-4 py-2 border border-sage/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest">
+                            <option value="">Toutes les catégories</option>
+                            <option value="conseils">Conseils phytothérapie</option>
+                            <option value="plantes">Plantes médicinales</option>
+                            <option value="recettes">Recettes de tisanes</option>
+                            <option value="bienetre">Bien-être</option>
+                            <option value="actualites">Actualités</option>
+                        </select>
+                        <select id="statusFilter" class="px-4 py-2 border border-sage/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest">
+                            <option value="">Tous les statuts</option>
+                            <option value="published">Publié</option>
+                            <option value="draft">Brouillon</option>
+                            <option value="scheduled">Programmé</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Articles Table -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-sage/10">
+                                <tr>
+                                    <th class="text-left py-3 px-4 text-sm font-medium text-forest">Article</th>
+                                    <th class="text-left py-3 px-4 text-sm font-medium text-forest">Catégorie</th>
+                                    <th class="text-left py-3 px-4 text-sm font-medium text-forest">Auteur</th>
+                                    <th class="text-left py-3 px-4 text-sm font-medium text-forest">Date</th>
+                                    <th class="text-left py-3 px-4 text-sm font-medium text-forest">Statut</th>
+                                    <th class="text-left py-3 px-4 text-sm font-medium text-forest">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="articlesTableBody">
+                                <!-- Articles will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Article Modal -->
+    <div id="articleModal" class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 hidden z-50">
+        <div class="bg-white rounded-2xl p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold text-forest" id="modalTitle">Nouvel article</h3>
+                <button id="closeModal" class="text-soft-gray hover:text-forest">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <form id="articleForm" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-forest mb-2">Titre de l'article *</label>
+                        <input type="text" id="articleTitle" required 
+                               class="w-full px-4 py-2 border border-sage/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-forest mb-2">URL (slug)</label>
+                        <input type="text" id="articleSlug" placeholder="exemple: bienfaits-camomille"
+                               class="w-full px-4 py-2 border border-sage/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest">
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-forest mb-2">Catégorie *</label>
+                        <select id="articleCategory" required 
+                                class="w-full px-4 py-2 border border-sage/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest">
+                            <option value="">Sélectionner une catégorie</option>
+                            <option value="conseils">Conseils phytothérapie</option>
+                            <option value="plantes">Plantes médicinales</option>
+                            <option value="recettes">Recettes de tisanes</option>
+                            <option value="bienetre">Bien-être</option>
+                            <option value="actualites">Actualités</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-forest mb-2">Auteur *</label>
+                        <select id="articleAuthor" required 
+                                class="w-full px-4 py-2 border border-sage/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest">
+                            <option value="">Sélectionner un auteur</option>
+                            <option value="Céline">Céline</option>
+                            <option value="Henrieta">Henrieta</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-forest mb-2">Statut</label>
+                        <select id="articleStatus" 
+                                class="w-full px-4 py-2 border border-sage/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest">
+                            <option value="draft">Brouillon</option>
+                            <option value="published">Publié</option>
+                            <option value="scheduled">Programmé</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-forest mb-2">Extrait (description courte)</label>
+                    <textarea id="articleExcerpt" rows="2" maxlength="200"
+                              class="w-full px-4 py-2 border border-sage/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest"
+                              placeholder="Brève description de l'article pour les réseaux sociaux et moteurs de recherche..."></textarea>
+                    <p class="text-xs text-soft-gray mt-1">Maximum 200 caractères</p>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-forest mb-2">Image de couverture</label>
+                    <input type="url" id="articleImage" placeholder="https://example.com/image.jpg"
+                           class="w-full px-4 py-2 border border-sage/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-forest">
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-forest mb-2">Contenu de l'article *</label>
+                    <div class="editor-toolbar flex gap-2 p-2 rounded-t-lg">
+                        <button type="button" onclick="formatText('bold')" class="p-2 hover:bg-sage/10 rounded">
+                            <i data-lucide="bold" class="w-4 h-4"></i>
+                        </button>
+                        <button type="button" onclick="formatText('italic')" class="p-2 hover:bg-sage/10 rounded">
+                            <i data-lucide="italic" class="w-4 h-4"></i>
+                        </button>
+                        <button type="button" onclick="formatText('heading')" class="p-2 hover:bg-sage/10 rounded">
+                            <i data-lucide="heading" class="w-4 h-4"></i>
+                        </button>
+                        <button type="button" onclick="formatText('list')" class="p-2 hover:bg-sage/10 rounded">
+                            <i data-lucide="list" class="w-4 h-4"></i>
+                        </button>
+                        <button type="button" onclick="formatText('link')" class="p-2 hover:bg-sage/10 rounded">
+                            <i data-lucide="link" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                    <textarea id="articleContent" rows="12" required
+                              class="editor-content w-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-forest"
+                              placeholder="Rédigez votre article ici..."></textarea>
+                </div>
+                
+                <div class="flex justify-end gap-4">
+                    <button type="button" id="cancelBtn" 
+                            class="px-6 py-2 border border-sage/30 rounded-lg hover:bg-sage/10 transition-colors">
+                        Annuler
+                    </button>
+                    <button type="submit" 
+                            class="bg-forest text-natural px-6 py-2 rounded-lg hover:bg-leaf transition-colors">
+                        Enregistrer
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Set user email from session
+        const userEmail = sessionStorage.getItem('adminEmail');
+        if (userEmail) {
+            document.getElementById('userEmail').textContent = userEmail;
+        }
+        
+        // Logout functionality
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            sessionStorage.removeItem('adminAuthenticated');
+            sessionStorage.removeItem('adminEmail');
+            window.location.href = '../index.html'; // Return to main site homepage
+        });
+        
+        // Sample articles data
+        let articles = [
+            {
+                id: 1,
+                title: 'Les bienfaits de la camomille sur le sommeil',
+                slug: 'bienfaits-camomille-sommeil',
+                category: 'conseils',
+                author: 'Céline',
+                excerpt: 'Découvrez comment la camomille peut vous aider à retrouver un sommeil naturel et réparateur.',
+                content: '<p>La camomille est une plante médicinale connue depuis l\'Antiquité pour ses propriétés apaisantes...</p>',
+                image: 'https://example.com/camomille-sommeil.jpg',
+                status: 'published',
+                date: '2024-03-10',
+                views: 456,
+                comments: 12
+            },
+            {
+                id: 2,
+                title: 'Recette de tisane detox printanière',
+                slug: 'recette-tisane-detex-printaniere',
+                category: 'recettes',
+                author: 'Henrieta',
+                excerpt: 'Une délicieuse tisane pour purifier votre organisme au printemps avec des plantes de saison.',
+                content: '<p>Le printemps est le moment idéal pour faire une cure de détoxification naturelle...</p>',
+                image: 'https://example.com/tisane-detox.jpg',
+                status: 'published',
+                date: '2024-03-08',
+                views: 234,
+                comments: 8
+            },
+            {
+                id: 3,
+                title: 'Le millepertuis : allié de votre moral',
+                slug: 'millepertuis-moral',
+                category: 'plantes',
+                author: 'Céline',
+                excerpt: 'Le millepertuis est une plante remarquable pour soutenir l\'équilibre émotionnel.',
+                content: '<p>Le millepertuis (Hypericum perforatum) est une plante médicinale traditionnellement utilisée...</p>',
+                image: 'https://example.com/millepertuis.jpg',
+                status: 'draft',
+                date: '2024-03-05',
+                views: 0,
+                comments: 0
+            }
+        ];
+        
+        // Render articles table
+        function renderArticles(filteredArticles = articles) {
+            const tbody = document.getElementById('articlesTableBody');
+            tbody.innerHTML = '';
+            
+            filteredArticles.forEach(article => {
+                const row = document.createElement('tr');
+                row.className = 'border-b border-sage/10 hover:bg-sage/5';
+                
+                const statusClass = {
+                    published: 'bg-leaf/10 text-leaf',
+                    draft: 'bg-soft-gray/10 text-soft-gray',
+                    scheduled: 'bg-lavender/10 text-lavender'
+                }[article.status];
+                
+                const statusText = {
+                    published: 'Publié',
+                    draft: 'Brouillon',
+                    scheduled: 'Programmé'
+                }[article.status];
+                
+                row.innerHTML = `
+                    <td class="py-3 px-4">
+                        <div class="flex items-center gap-3">
+                            <img src="${article.image || 'https://via.placeholder.com/40x40'}" 
+                                 alt="${article.title}" class="w-10 h-10 rounded-lg object-cover">
+                            <div>
+                                <p class="font-medium text-forest">${article.title}</p>
+                                <p class="text-xs text-soft-gray">${article.excerpt.substring(0, 60)}...</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="py-3 px-4">
+                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-sage/10 text-sage">
+                            ${article.category}
+                        </span>
+                    </td>
+                    <td class="py-3 px-4 text-sm text-soft-gray">${article.author}</td>
+                    <td class="py-3 px-4 text-sm text-soft-gray">${article.date}</td>
+                    <td class="py-3 px-4">
+                        <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${statusClass}">
+                            ${statusText}
+                        </span>
+                    </td>
+                    <td class="py-3 px-4">
+                        <div class="flex gap-2">
+                            <button onclick="editArticle(${article.id})" 
+                                    class="p-1 text-sage hover:text-forest">
+                                <i data-lucide="edit" class="w-4 h-4"></i>
+                            </button>
+                            <button onclick="duplicateArticle(${article.id})" 
+                                    class="p-1 text-soft-gray hover:text-forest">
+                                <i data-lucide="copy" class="w-4 h-4"></i>
+                            </button>
+                            <button onclick="deleteArticle(${article.id})" 
+                                    class="p-1 text-flower hover:text-red-600">
+                                <i data-lucide="trash-2" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </td>
+                `;
+                
+                tbody.appendChild(row);
+            });
+            
+            // Re-initialize icons
+            lucide.createIcons();
+        }
+        
+        // Modal functionality
+        const modal = document.getElementById('articleModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const articleForm = document.getElementById('articleForm');
+        let editingArticleId = null;
+        
+        document.getElementById('addArticleBtn').addEventListener('click', () => {
+            editingArticleId = null;
+            modalTitle.textContent = 'Nouvel article';
+            articleForm.reset();
+            modal.classList.remove('hidden');
+        });
+        
+        document.getElementById('closeModal').addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+        
+        document.getElementById('cancelBtn').addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+        
+        // Auto-generate slug from title
+        document.getElementById('articleTitle').addEventListener('input', (e) => {
+            const slug = e.target.value
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-+|-+$/g, '');
+            document.getElementById('articleSlug').value = slug;
+        });
+        
+        // Form submission
+        articleForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const articleData = {
+                title: document.getElementById('articleTitle').value,
+                slug: document.getElementById('articleSlug').value,
+                category: document.getElementById('articleCategory').value,
+                author: document.getElementById('articleAuthor').value,
+                excerpt: document.getElementById('articleExcerpt').value,
+                content: document.getElementById('articleContent').value,
+                image: document.getElementById('articleImage').value,
+                status: document.getElementById('articleStatus').value,
+                date: new Date().toISOString().split('T')[0]
+            };
+            
+            if (editingArticleId) {
+                // Update existing article
+                const index = articles.findIndex(a => a.id === editingArticleId);
+                articles[index] = { ...articles[index], ...articleData };
+            } else {
+                // Add new article
+                articleData.id = Date.now();
+                articleData.views = 0;
+                articleData.comments = 0;
+                articles.push(articleData);
+            }
+            
+            renderArticles();
+            modal.classList.add('hidden');
+            articleForm.reset();
+            
+            showNotification('Article enregistré avec succès', 'success');
+        });
+        
+        // Edit article
+        function editArticle(id) {
+            const article = articles.find(a => a.id === id);
+            if (!article) return;
+            
+            editingArticleId = id;
+            modalTitle.textContent = 'Modifier l\'article';
+            
+            document.getElementById('articleTitle').value = article.title;
+            document.getElementById('articleSlug').value = article.slug;
+            document.getElementById('articleCategory').value = article.category;
+            document.getElementById('articleAuthor').value = article.author;
+            document.getElementById('articleExcerpt').value = article.excerpt;
+            document.getElementById('articleContent').value = article.content;
+            document.getElementById('articleImage').value = article.image || '';
+            document.getElementById('articleStatus').value = article.status;
+            
+            modal.classList.remove('hidden');
+        }
+        
+        // Duplicate article
+        function duplicateArticle(id) {
+            const article = articles.find(a => a.id === id);
+            if (!article) return;
+            
+            const duplicate = {
+                ...article,
+                id: Date.now(),
+                title: article.title + ' (copie)',
+                slug: article.slug + '-copie',
+                status: 'draft',
+                date: new Date().toISOString().split('T')[0],
+                views: 0,
+                comments: 0
+            };
+            
+            articles.push(duplicate);
+            renderArticles();
+            showNotification('Article dupliqué avec succès', 'success');
+        }
+        
+        // Delete article
+        function deleteArticle(id) {
+            if (confirm('Êtes-vous sûr de vouloir supprimer cet article ?')) {
+                articles = articles.filter(a => a.id !== id);
+                renderArticles();
+                showNotification('Article supprimé avec succès', 'success');
+            }
+        }
+        
+        // Text formatting functions
+        function formatText(command) {
+            const textarea = document.getElementById('articleContent');
+            const start = textarea.selectionStart;
+            const end = textarea.selectionEnd;
+            const selectedText = textarea.value.substring(start, end);
+            
+            let formattedText = '';
+            
+            switch(command) {
+                case 'bold':
+                    formattedText = `**${selectedText}**`;
+                    break;
+                case 'italic':
+                    formattedText = `*${selectedText}*`;
+                    break;
+                case 'heading':
+                    formattedText = `## ${selectedText}`;
+                    break;
+                case 'list':
+                    formattedText = `- ${selectedText}`;
+                    break;
+                case 'link':
+                    formattedText = `[${selectedText}](url)`;
+                    break;
+            }
+            
+            textarea.value = textarea.value.substring(0, start) + formattedText + textarea.value.substring(end);
+            textarea.focus();
+            textarea.setSelectionRange(start, start + formattedText.length);
+        }
+        
+        // Filter functionality
+        document.getElementById('articleSearch').addEventListener('input', filterArticles);
+        document.getElementById('categoryFilter').addEventListener('change', filterArticles);
+        document.getElementById('statusFilter').addEventListener('change', filterArticles);
+        
+        function filterArticles() {
+            const searchTerm = document.getElementById('articleSearch').value.toLowerCase();
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            const statusFilter = document.getElementById('statusFilter').value;
+            
+            const filtered = articles.filter(article => {
+                const matchesSearch = article.title.toLowerCase().includes(searchTerm) || 
+                                   article.excerpt.toLowerCase().includes(searchTerm);
+                const matchesCategory = !categoryFilter || article.category === categoryFilter;
+                const matchesStatus = !statusFilter || article.status === statusFilter;
+                
+                return matchesSearch && matchesCategory && matchesStatus;
+            });
+            
+            renderArticles(filtered);
+        }
+        
+        // Notification system
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 ${
+                type === 'success' ? 'bg-leaf text-natural' : 
+                type === 'error' ? 'bg-flower text-natural' : 
+                'bg-forest text-natural'
+            }`;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+        
+        // Initial render
+        renderArticles();
+    </script>
+</body>
+</html>

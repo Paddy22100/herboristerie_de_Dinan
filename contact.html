@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez Le Jardin des Colibris, herboristerie à Dinan. Céline et Henrieta, herboristes diplômées, vous accueillent pour des consultations phytothérapie. 12 Rue de l'Horloge, 22100 Dinan.">
+    <meta name="keywords" content="contact herboristerie Dinan, téléphone herboristerie, adresse Le Jardin des Colibris, rendez-vous phytothérapie Dinan, Céline Henrieta herboristes, consultation phytothérapie Dinan">
+    <title>Contact - Le Jardin des Colibris | Herboristerie à Dinan</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Alice&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sage': '#8FAF9B',
+                        'forest': '#4F6F5E',
+                        'leaf': '#6F8F6B',
+                        'lavender': '#A89BC7',
+                        'flower': '#E6A5A5',
+                        'chamomile': '#E7C86E',
+                        'natural': '#F7F6F2',
+                        'botanical': '#E8E2D7',
+                        'soft-gray': '#6B6B6B'
+                    },
+                    fontFamily: {
+                        'allura': ['Allura', 'cursive'],
+                        'alice': ['Alice', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Alice', serif;
+            background-color: #F7F6F2;
+            color: #4F6F5E;
+        }
+        
+        .font-allura {
+            font-family: 'Allura', cursive;
+        }
+        
+        .font-alice {
+            font-family: 'Alice', serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #F7F6F2;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #8FAF9B;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6F8F6B;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+        
+        .float-animation {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .watercolor-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%238FAF9B' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(79, 111, 94, 0.15);
+        }
+    </style>
+</head>
+<body class="watercolor-bg antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-natural/90 backdrop-blur-md border-b border-sage/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="Medias/logo.png" alt="Le Jardin des Colibris - Herboristerie de Dinan" class="w-10 h-10">
+                    <div class="flex flex-col">
+                        <span class="font-allura text-2xl text-forest leading-none">Le Jardin des Colibris</span>
+                        <span class="text-xs text-soft-gray tracking-widest uppercase">Herboristerie de Dinan</span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium">Accueil</a>
+                    <a href="boutique.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium">La Boutique</a>
+                    <a href="plantes-tisanes.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium">Plantes & Tisanes</a>
+                    <a href="conseils.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium">Conseils</a>
+                    <a href="index.html#apropos" class="text-forest hover:text-sage transition-colors duration-200 font-medium">À propos</a>
+                    <a href="contact.html" class="bg-forest text-natural px-6 py-2 rounded-full hover:bg-leaf transition-colors duration-200 shadow-md hover:shadow-lg">Contact</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-forest hover:text-sage focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-natural border-t border-sage/20">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">Accueil</a>
+                <a href="boutique.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">La Boutique</a>
+                <a href="plantes-tisanes.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">Plantes & Tisanes</a>
+                <a href="conseils.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">Conseils</a>
+                <a href="index.html#apropos" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">À propos</a>
+                <a href="contact.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-20 right-0 w-96 h-96 bg-sage/20 rounded-full blur-3xl float-animation"></div>
+            <div class="absolute bottom-20 left-0 w-72 h-72 bg-lavender/20 rounded-full blur-3xl float-animation" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <h1 class="font-allura text-6xl md:text-7xl lg:text-8xl text-forest leading-tight mb-6">
+                    <span class="text-leaf">Contact</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-soft-gray font-alice italic max-w-3xl mx-auto">
+                    Venez rencontrer Céline et Henrieta, herboristes diplômées, dans leur boutique du centre historique de Dinan 
+                    ou contactez-nous pour des conseils personnalisés en phytothérapie. Consultations sur place 
+                    et en ligne disponibles.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-20 bg-white/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div>
+                        <span class="text-sage font-medium tracking-wider uppercase text-sm">Informations de contact</span>
+                        <h2 class="font-allura text-5xl text-forest mt-2 mb-6">Venez nous rencontrer</h2>
+                        <div class="w-24 h-1 bg-chamomile rounded-full"></div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-sage/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-forest"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-forest mb-1">Adresse</h3>
+                                <p class="text-soft-gray">
+                                    12 Rue de l'Horloge<br>
+                                    22100 Dinan, Bretagne<br>
+                                    Centre historique
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-chamomile/30 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6 text-forest"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-forest mb-1">Horaires d'ouverture</h3>
+                                <p class="text-soft-gray">
+                                    <strong>Mardi - Vendredi :</strong> 10h00 - 19h00<br>
+                                    <strong>Samedi :</strong> 9h30 - 18h00<br>
+                                    <strong>Dimanche - Lundi :</strong> Fermé
+                                </p>
+                                <p class="text-sm text-sage mt-2">Consultations possibles en dehors des horaires d'ouverture sur rendez-vous</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-lavender/30 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6 text-forest"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-forest mb-1">Téléphone</h3>
+                                <p class="text-soft-gray">
+                                    <a href="tel:0296390000" class="hover:text-sage transition-colors">02 96 39 00 00</a><br>
+                                    <span class="text-sm">Réponses du mardi au samedi, 10h-18h</span>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-flower/30 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="mail" class="w-6 h-6 text-forest"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-forest mb-1">Email</h3>
+                                <p class="text-soft-gray">
+                                    <a href="mailto:contact@jardindescolibris.fr" class="hover:text-sage transition-colors">contact@jardindescolibris.fr</a><br>
+                                    <span class="text-sm">Réponse sous 24h en semaine</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="pt-6">
+                        <h3 class="font-bold text-forest mb-4">Suivez-nous</h3>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-12 h-12 rounded-full bg-forest text-natural flex items-center justify-center hover:bg-leaf transition-colors">
+                                <i data-lucide="facebook" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-forest text-natural flex items-center justify-center hover:bg-leaf transition-colors">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-forest text-natural flex items-center justify-center hover:bg-leaf transition-colors">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Map -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-sage/10 h-96 md:h-auto min-h-[500px] relative">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2683.769532512595!2d-2.0476!3d48.4565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480e05c6c5a7aae1%3A0x40ca5cdbe7f7b60!2sDinan!5e0!3m2!1sfr!2sfr!4v1234567890"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="absolute inset-0">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Form -->
+    <section class="py-20 bg-natural">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-sage font-medium tracking-wider uppercase text-sm">Demande de consultation</span>
+                <h2 class="font-allura text-5xl text-forest mt-2 mb-4">Prendre rendez-vous</h2>
+                <div class="w-24 h-1 bg-chamomile mx-auto rounded-full"></div>
+                <p class="text-soft-gray max-w-2xl mx-auto mt-6">
+                    Pour des conseils personnalisés en phytothérapie avec Céline et Henrieta, diplômées et expérimentées, 
+                    remplissez ce formulaire. Elles vous contacteront pour fixer un rendez-vous adapté 
+                    à vos disponibilités et à vos besoins spécifiques.
+                </p>
+            </div>
+            
+            <form class="bg-white rounded-2xl p-8 shadow-lg border border-sage/10">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="nom" class="block text-forest font-medium mb-2">Nom *</label>
+                        <input type="text" id="nom" name="nom" required 
+                               class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-forest focus:ring-2 focus:ring-forest/20"
+                               placeholder="Votre nom">
+                    </div>
+                    <div>
+                        <label for="prenom" class="block text-forest font-medium mb-2">Prénom *</label>
+                        <input type="text" id="prenom" name="prenom" required 
+                               class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-forest focus:ring-2 focus:ring-forest/20"
+                               placeholder="Votre prénom">
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="email" class="block text-forest font-medium mb-2">Email *</label>
+                        <input type="email" id="email" name="email" required 
+                               class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-forest focus:ring-2 focus:ring-forest/20"
+                               placeholder="votre.email@example.com">
+                    </div>
+                    <div>
+                        <label for="telephone" class="block text-forest font-medium mb-2">Téléphone *</label>
+                        <input type="tel" id="telephone" name="telephone" required 
+                               class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-forest focus:ring-2 focus:ring-forest/20"
+                               placeholder="06 12 34 56 78">
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="sujet" class="block text-forest font-medium mb-2">Type de consultation *</label>
+                    <select id="sujet" name="sujet" required 
+                            class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-forest focus:ring-2 focus:ring-forest/20">
+                        <option value="">Choisissez un type</option>
+                        <option value="conseil-general">Conseil général en phytothérapie</option>
+                        <option value="digestion">Troubles digestifs</option>
+                        <option value="sommeil">Problèmes de sommeil</option>
+                        <option value="stress">Gestion du stress et anxiété</option>
+                        <option value="immunite">Renforcement immunitaire</option>
+                        <option value="feminin">Santé féminine</option>
+                        <option value="enfant">Santé de l'enfant</option>
+                        <option value="autre">Autre demande</option>
+                    </select>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="disponibilites" class="block text-forest font-medium mb-2">Vos disponibilités *</label>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        <label class="flex items-center">
+                            <input type="checkbox" name="disponibilites" value="matin" class="mr-2">
+                            <span class="text-sm">Matin</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="disponibilites" value="apres-midi" class="mr-2">
+                            <span class="text-sm">Après-midi</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="disponibilites" value="soir" class="mr-2">
+                            <span class="text-sm">Soir</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="disponibilites" value="weekend" class="mr-2">
+                            <span class="text-sm">Weekend</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="message" class="block text-forest font-medium mb-2">Votre message *</label>
+                    <textarea id="message" name="message" rows="5" required 
+                              class="w-full px-4 py-3 border border-sage/30 rounded-lg focus:outline-none focus:border-forest focus:ring-2 focus:ring-forest/20"
+                              placeholder="Décrivez brièvement votre demande et vos attentes..."></textarea>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="flex items-start">
+                        <input type="checkbox" name="rgpd" required class="mr-3 mt-1">
+                        <span class="text-sm text-soft-gray">
+                            J'accepte que mes données personnelles soient utilisées pour traiter ma demande 
+                            et être contacté par Le Jardin des Colibris. Conformément à la loi RGPD, 
+                            je dispose d'un droit d'accès, de modification et de suppression de mes données.
+                        </span>
+                    </label>
+                </div>
+                
+                <div class="text-center">
+                    <button type="submit" 
+                            class="bg-forest text-natural px-8 py-4 rounded-full hover:bg-leaf transition-colors font-bold shadow-lg hover:shadow-xl">
+                        Envoyer ma demande
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Quick Contact -->
+    <section class="py-16 bg-forest text-natural text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-allura text-4xl md:text-5xl mb-6">Questions rapides ?</h2>
+            <p class="text-lg text-natural/80 mb-8">
+                Pour une question simple ou pour vérifier la disponibilité d'un produit, 
+                n'hésitez pas à nous appeler directement ou à passer à la boutique.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:0296390000" class="inline-flex items-center justify-center gap-2 bg-chamomile text-forest px-8 py-4 rounded-full hover:bg-yellow-400 transition-colors font-bold shadow-lg">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                    <span>02 96 39 00 00</span>
+                </a>
+                <a href="mailto:contact@jardindescolibris.fr" class="inline-flex items-center justify-center gap-2 border-2 border-natural text-natural px-8 py-4 rounded-full hover:bg-natural hover:text-forest transition-colors">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                    <span>Envoyer un email</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-sage font-medium tracking-wider uppercase text-sm">Questions fréquentes</span>
+                <h2 class="font-allura text-5xl text-forest mt-2 mb-4">FAQ</h2>
+                <div class="w-24 h-1 bg-chamomile mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-sage/10">
+                    <button class="w-full text-left flex items-center justify-between" onclick="toggleFAQ(this)">
+                        <h3 class="font-bold text-forest">Faut-il prendre rendez-vous pour venir à la boutique ?</h3>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-forest transition-transform"></i>
+                    </button>
+                    <div class="hidden mt-4 text-soft-gray">
+                        <p>Non, vous pouvez venir librement pendant nos horaires d'ouverture. 
+                        Cependant, pour une consultation personnalisée, il est préférable de prendre rendez-vous 
+                        pour s'assurer de la disponibilité de Céline et Henrieta.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-sage/10">
+                    <button class="w-full text-left flex items-center justify-between" onclick="toggleFAQ(this)">
+                        <h3 class="font-bold text-forest">Les consultations sont-elles remboursées ?</h3>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-forest transition-transform"></i>
+                    </button>
+                    <div class="hidden mt-4 text-soft-gray">
+                        <p>Les consultations en phytothérapie ne sont pas remboursées par la sécurité sociale. 
+                        Cependant, certaines mutuelles complémentaires peuvent prendre en charge une partie 
+                        des frais. Renseignez-vous auprès de votre mutuelle.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-sage/10">
+                    <button class="w-full text-left flex items-center justify-between" onclick="toggleFAQ(this)">
+                        <h3 class="font-bold text-forest">Proposez-vous des consultations en ligne ?</h3>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-forest transition-transform"></i>
+                    </button>
+                    <div class="hidden mt-4 text-soft-gray">
+                        <p>Oui, nous proposons des consultations par téléphone ou visioconférence 
+                        pour les personnes qui ne peuvent pas se déplacer. Le tarif est le même qu'en cabinet.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-sage/10">
+                    <button class="w-full text-left flex items-center justify-between" onclick="toggleFAQ(this)">
+                        <h3 class="font-bold text-forest">Comment préparer ma première consultation ?</h3>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-forest transition-transform"></i>
+                    </button>
+                    <div class="hidden mt-4 text-soft-gray">
+                        <p>Pour votre première consultation, pensez à venir avec la liste de vos médicaments 
+                        actuels, vos examens sanguins récents si vous en avez, et vos questions spécifiques. 
+                        La consultation dure environ 45 minutes à 1 heure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-forest text-natural/80 py-12 border-t border-natural/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="leaf" class="w-6 h-6 text-chamomile"></i>
+                        <span class="font-allura text-2xl text-natural">Le Jardin des Colibris</span>
+                    </div>
+                    <p class="text-sm text-natural/60">
+                        Herboristerie traditionnelle à Dinan, Bretagne. 
+                        Plantes médicinales, tisanes et conseils bien-être.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold text-natural mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-chamomile transition-colors">Accueil</a></li>
+                        <li><a href="boutique.html" class="hover:text-chamomile transition-colors">La Boutique</a></li>
+                        <li><a href="plantes-tisanes.html" class="hover:text-chamomile transition-colors">Plantes & Tisanes</a></li>
+                        <li><a href="conseils.html" class="hover:text-chamomile transition-colors">Conseils</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h4 class="font-bold text-natural mb-4">Informations</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mentions-legales.html" class="hover:text-chamomile transition-colors">Mentions légales</a></li>
+                        <li><a href="politique-confidentialite.html" class="hover:text-chamomile transition-colors">Politique de confidentialité</a></li>
+                        <li><a href="cgv.html" class="hover:text-chamomile transition-colors">CGV</a></li>
+                        <li><a href="admin/login.html" class="hover:text-chamomile transition-colors opacity-70 hover:opacity-100">Administration</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-bold text-natural mb-4">Contact rapide</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            <a href="tel:0296390000" class="hover:text-chamomile transition-colors">02 96 39 00 00</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                            <a href="mailto:contact@jardindescolibris.fr" class="hover:text-chamomile transition-colors">contact@jardindescolibris.fr</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-natural/10 pt-8 text-center text-sm text-natural/60">
+                <p>&copy; 2024 Le Jardin des Colibris - Herboristerie de Dinan. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+            
+            lastScroll = currentScroll;
+        });
+        
+        // FAQ Toggle
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+        
+        // Form submission
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would normally send the form data to a server
+            // For now, we'll just show a success message
+            alert('Votre demande a été envoyée avec succès. Nous vous contacterons dans les plus brefs délais.');
+            e.target.reset();
+        });
+    </script>
+
+</body>
+</html>
