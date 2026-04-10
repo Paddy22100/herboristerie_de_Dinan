@@ -1,4 +1,4 @@
-# Dashboard Administrateur - Le Jardin des Colibris
+﻿# Dashboard Administrateur - Herboristerie de Dinan
 
 ## Architecture Complète
 
@@ -239,4 +239,5 @@ PLAUSIBLE_DOMAIN=jardindescolibris.fr
 
 ---
 
-Ce dashboard administrateur offre une solution complète, sécurisée et évolutive pour gérer l'herboristerie Le Jardin des Colibris, avec une interface intuitive adaptée à des utilisateurs non techniques.
+Ce dashboard administrateur offre une solution complète, sécurisée et évolutive pour gérer l'herboristerie Herboristerie de Dinan, avec une interface intuitive adaptée à des utilisateurs non techniques.
+
