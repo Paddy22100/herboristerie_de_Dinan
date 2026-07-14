@@ -1,0 +1,3 @@
+# Sauvegardes manuelles : redondant avec l'historique Git lui-même,
+# et source de duplication accidentelle de secrets dans le passé.
+Sauvegardes/

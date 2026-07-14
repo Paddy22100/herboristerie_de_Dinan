@@ -1,25 +1,12 @@
 // Configuration de l'authentification sécurisée
+//
+// Aucun identifiant réel ne doit jamais être écrit ici : ce fichier est
+// public (servi tel quel au navigateur). Tant qu'il n'existe pas de vrai
+// backend avec mots de passe hachés côté serveur, cette liste doit rester
+// vide — l'espace admin reste non fonctionnel plutôt que faussement protégé.
 const AUTH_CONFIG = {
-    // Utilisateurs autorisés (à remplacer par une base de données sécurisée)
-    users: [
-        {
-            id: 1,
-            email: 'celine@jardindescolibris.fr',
-            password: '***REDACTED-CREDENTIAL-REMOVED***', // À hasher avec bcrypt
-            name: 'Céline',
-            role: 'admin',
-            permissions: ['dashboard', 'products', 'stock', 'blog', 'orders', 'analytics']
-        },
-        {
-            id: 2,
-            email: 'henrieta@jardindescolibris.fr',
-            password: '***REDACTED-CREDENTIAL-REMOVED***', // À hasher avec bcrypt
-            name: 'Henrieta',
-            role: 'admin',
-            permissions: ['dashboard', 'products', 'stock', 'blog', 'orders', 'analytics']
-        }
-    ],
-    
+    users: [],
+
     // Configuration de sécurité
     sessionTimeout: 3600000, // 1 heure en millisecondes
     maxLoginAttempts: 5,
@@ -526,4 +513,4 @@ function applySecurityHeaders() {
     });
 }
 
-export { AUTH_CONFIG, DATABASE_CONFIG, SecurityHeaders };
+window.AdminSecurityConfig = { AUTH_CONFIG, DATABASE_CONFIG, SECURITY_HEADERS };

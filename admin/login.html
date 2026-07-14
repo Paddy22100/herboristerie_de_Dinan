@@ -158,7 +158,7 @@
                 
                 <!-- Error Message -->
                 <div id="errorMessage" class="hidden bg-flower/10 border border-flower/30 text-soft-gray px-4 py-3 rounded-lg text-sm">
-                    Email ou mot de passe incorrect
+                    Espace administrateur non disponible pour le moment
                 </div>
             </form>
             
@@ -238,22 +238,13 @@
             }
         });
         
-        // Simulate authentication function (replace with real backend call)
+        // Cet espace admin est une maquette statique : aucune authentification
+        // serveur réelle n'existe encore. Ne jamais coder d'identifiants en dur
+        // ici — un vrai backend (avec hachage de mot de passe côté serveur)
+        // doit être mis en place avant de rouvrir cet accès.
         async function simulateAuthentication(email, password) {
-            // Simulate network delay
             await new Promise(resolve => setTimeout(resolve, 1000));
-            
-            // Check credentials (replace with real authentication)
-            const validCredentials = [
-                { email: 'celine@jardindescolibris.fr', password: '***REDACTED-CREDENTIAL-REMOVED***' },
-                { email: 'henrieta@jardindescolibris.fr', password: '***REDACTED-CREDENTIAL-REMOVED***' }
-            ];
-            
-            const isValid = validCredentials.some(cred => cred.email === email && cred.password === password);
-            
-            if (!isValid) {
-                throw new Error('Invalid credentials');
-            }
+            throw new Error('Espace administrateur non disponible pour le moment');
         }
         
         // Check if already authenticated

@@ -30,21 +30,12 @@ admin/
 - **Logout automatique** après inactivité
 
 #### Configuration Utilisateurs
+> ⚠️ Ne jamais documenter de vrais identifiants ici — ce fichier est versionné.
+> Cet espace admin est une maquette statique sans backend réel ; la liste des
+> utilisateurs doit rester vide tant qu'un vrai serveur d'authentification
+> (mots de passe hachés, base de données) n'est pas en place.
 ```javascript
-users: [
-    {
-        email: 'celine@jardindescolibris.fr',
-        password: '***REDACTED-CREDENTIAL-REMOVED***',
-        role: 'admin',
-        permissions: ['dashboard', 'products', 'stock', 'blog', 'orders', 'analytics']
-    },
-    {
-        email: 'henrieta@jardindescolibris.fr',
-        password: '***REDACTED-CREDENTIAL-REMOVED***',
-        role: 'admin',
-        permissions: ['dashboard', 'products', 'stock', 'blog', 'orders', 'analytics']
-    }
-]
+users: [] // à peupler uniquement côté serveur, une fois le backend construit
 ```
 
 ### 📊 Fonctionnalités Principales
