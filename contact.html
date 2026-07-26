@@ -374,10 +374,16 @@
                 </div>
                 
                 <div class="text-center">
-                    <button type="submit" 
+                    <button type="submit"
                             class="bg-forest text-natural px-8 py-4 rounded-full hover:bg-leaf transition-colors font-bold shadow-lg hover:shadow-xl">
                         Envoyer ma demande
                     </button>
+                    <p id="mailClientNote" class="hidden mt-4 text-sm text-soft-gray">
+                        Votre logiciel de messagerie va s'ouvrir avec votre demande pré-remplie :
+                        il ne reste plus qu'à cliquer sur « Envoyer ». Si rien ne s'ouvre,
+                        écrivez-nous directement à
+                        <a href="mailto:contact@jardindescolibris.fr" class="text-forest underline">contact@jardindescolibris.fr</a>.
+                    </p>
                 </div>
             </form>
         </div>
@@ -570,14 +576,43 @@
             icon.classList.toggle('rotate-180');
         }
         
-        // Form submission
+        // Envoi du formulaire par mailto : fonctionne sans backend, ouvre le
+        // client email du visiteur avec le message pré-rempli. À terme, un
+        // service comme Web3Forms (web3forms.com, gratuit, sans compte
+        // requis) permettrait un envoi silencieux sans quitter la page.
         document.querySelector('form').addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            // Here you would normally send the form data to a server
-            // For now, we'll just show a success message
-            alert('Votre demande a été envoyée avec succès. Nous vous contacterons dans les plus brefs délais.');
-            e.target.reset();
+            const form = e.target;
+
+            const nom = form.nom.value;
+            const prenom = form.prenom.value;
+            const email = form.email.value;
+            const telephone = form.telephone.value;
+            const sujetSelect = form.sujet;
+            const sujetLabel = sujetSelect.options[sujetSelect.selectedIndex].text;
+            const disponibilites = Array.from(form.disponibilites)
+                .filter(cb => cb.checked)
+                .map(cb => cb.parentElement.textContent.trim())
+                .join(', ') || 'Non précisées';
+            const message = form.message.value;
+
+            const subject = `Demande de consultation - ${prenom} ${nom}`;
+            const body =
+`Nom : ${nom}
+Prénom : ${prenom}
+Email : ${email}
+Téléphone : ${telephone}
+Type de consultation : ${sujetLabel}
+Disponibilités : ${disponibilites}
+
+Message :
+${message}`;
+
+            const mailtoUrl = `mailto:contact@jardindescolibris.fr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoUrl;
+
+            const note = document.getElementById('mailClientNote');
+            if (note) note.classList.remove('hidden');
         });
     </script>
 

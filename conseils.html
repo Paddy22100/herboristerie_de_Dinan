@@ -449,14 +449,32 @@
                 rédigés par Céline et Henrieta, des recettes de tisanes exclusives et des offres spéciales 
                 sur les produits de notre herboristerie à Dinan.
             </p>
-            <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
-                <input type="email" placeholder="Votre email" class="flex-1 px-4 py-3 rounded-full text-forest focus:outline-none focus:ring-2 focus:ring-chamomile">
+            <form id="newsletterForm" class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+                <input type="email" id="newsletterEmail" name="newsletterEmail" required placeholder="Votre email" class="flex-1 px-4 py-3 rounded-full text-forest focus:outline-none focus:ring-2 focus:ring-chamomile">
                 <button type="submit" class="bg-chamomile text-forest px-8 py-3 rounded-full hover:bg-yellow-400 transition-colors font-bold shadow-lg">
                     S'inscrire
                 </button>
             </form>
+            <p id="newsletterNote" class="hidden mt-4 text-sm text-natural/80">
+                Votre logiciel de messagerie va s'ouvrir pour confirmer votre inscription :
+                il ne reste plus qu'à cliquer sur « Envoyer ».
+            </p>
         </div>
     </section>
+
+    <script>
+        // Inscription newsletter par mailto : fonctionne sans backend, en
+        // attendant un vrai outil newsletter (ex : Brevo, gratuit jusqu'à
+        // 300 emails/jour) qui gérerait l'inscription silencieusement.
+        document.getElementById('newsletterForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('newsletterEmail').value;
+            const subject = "Inscription à la newsletter";
+            const body = `Merci de m'inscrire à la newsletter de l'Herboristerie de Dinan.\n\nMon email : ${email}`;
+            window.location.href = `mailto:contact@jardindescolibris.fr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            document.getElementById('newsletterNote').classList.remove('hidden');
+        });
+    </script>
 
     <!-- CTA Section -->
     <section class="py-16 bg-natural text-center">
