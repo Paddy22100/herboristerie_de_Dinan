@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conseils en phytothérapie et plantes médicinales par l'Herboristerie de Dinan : digestion, sommeil, stress, immunité, santé féminine.">
+    <meta name="keywords" content="conseils phytothérapie Dinan, blog plantes médicinales, herboristerie Dinan conseils">
+    <meta name="robots" content="index, follow">
+    <title>Conseils & Articles - Herboristerie de Dinan</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Alice&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: {
+                    'sage': '#8FAF9B', 'forest': '#4F6F5E', 'leaf': '#6F8F6B',
+                    'lavender': '#A89BC7', 'flower': '#E6A5A5', 'chamomile': '#E7C86E',
+                    'natural': '#F7F6F2', 'botanical': '#E8E2D7', 'soft-gray': '#6B6B6B'
+                },
+                fontFamily: { 'allura': ['Allura', 'cursive'], 'alice': ['Alice', 'serif'] }
+            } }
+        }
+    </script>
+    <style>
+        body { font-family: 'Alice', serif; background-color: #F7F6F2; color: #4F6F5E; }
+        .font-allura { font-family: 'Allura', cursive; }
+        html { scroll-behavior: smooth; }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(79, 111, 94, 0.15); }
+    </style>
+</head>
+<body class="antialiased">
+    <nav class="bg-natural/90 backdrop-blur-md border-b border-sage/20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="Medias/logo-herboristerie-dinan.png" alt="Herboristerie de Dinan" class="w-10 h-10">
+                <span class="font-allura text-2xl text-forest">Herboristerie de Dinan</span>
+            </a>
+            <a href="blog.html" class="text-forest hover:text-sage transition-colors font-medium">← Tous les articles</a>
+        </div>
+    </nav>
+
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center mb-12">
+            <h1 class="font-allura text-5xl md:text-6xl text-forest mb-4">Conseils & Articles</h1>
+            <p class="text-soft-gray max-w-2xl mx-auto">
+                Nos conseils en phytothérapie, rédigés par l'équipe de l'Herboristerie de Dinan.
+            </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <a href="blog-digestion.html" class="group bg-white rounded-2xl overflow-hidden shadow-lg border border-sage/10 hover-lift block">
+                    <div class="h-44 overflow-hidden">
+                        <img src="Medias/Plantes/menthe-poivree.jpg" alt="Les plantes pour une digestion sereine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sage text-xs mb-2">5 min de lecture</p>
+                        <h2 class="font-allura text-2xl text-forest mb-2">Les plantes pour une digestion sereine</h2>
+                        <p class="text-soft-gray text-sm">Menthe poivrée, fenouil, camomille, genévrier : les plantes médicinales les plus efficaces pour soulager les troubles digestifs naturellement.</p>
+                    </div>
+                </a>
+                <a href="blog-sommeil.html" class="group bg-white rounded-2xl overflow-hidden shadow-lg border border-sage/10 hover-lift block">
+                    <div class="h-44 overflow-hidden">
+                        <img src="Medias/Plantes/tisane-sommeil.jpg" alt="Retrouver le sommeil naturellement grâce aux plantes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sage text-xs mb-2">6 min de lecture</p>
+                        <h2 class="font-allura text-2xl text-forest mb-2">Retrouver le sommeil naturellement grâce aux plantes</h2>
+                        <p class="text-soft-gray text-sm">Valériane, passiflore, tilleul : les plantes médicinales pour favoriser un sommeil naturel et de qualité, sans effets secondaires.</p>
+                    </div>
+                </a>
+                <a href="blog-infusions.html" class="group bg-white rounded-2xl overflow-hidden shadow-lg border border-sage/10 hover-lift block">
+                    <div class="h-44 overflow-hidden">
+                        <img src="Medias/Plantes/tisane-generique.jpg" alt="Comment préparer une infusion parfaite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sage text-xs mb-2">4 min de lecture</p>
+                        <h2 class="font-allura text-2xl text-forest mb-2">Comment préparer une infusion parfaite</h2>
+                        <p class="text-soft-gray text-sm">Température, temps d'infusion, dosage : le guide complet pour extraire au mieux les principes actifs de vos plantes médicinales.</p>
+                    </div>
+                </a>
+                <a href="blog-stress.html" class="group bg-white rounded-2xl overflow-hidden shadow-lg border border-sage/10 hover-lift block">
+                    <div class="h-44 overflow-hidden">
+                        <img src="Medias/Plantes/tisane-sommeil.jpg" alt="Gérer le stress avec les plantes adaptogènes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sage text-xs mb-2">5 min de lecture</p>
+                        <h2 class="font-allura text-2xl text-forest mb-2">Gérer le stress avec les plantes adaptogènes</h2>
+                        <p class="text-soft-gray text-sm">Rhodiola, ashwagandha, mélisse : les plantes adaptogènes qui aident le corps à mieux s'adapter au stress et à retrouver l'équilibre nerveux.</p>
+                    </div>
+                </a>
+                <a href="blog-immunite.html" class="group bg-white rounded-2xl overflow-hidden shadow-lg border border-sage/10 hover-lift block">
+                    <div class="h-44 overflow-hidden">
+                        <img src="Medias/Plantes/echinacee.jpg" alt="Renforcer son immunité naturellement" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sage text-xs mb-2">5 min de lecture</p>
+                        <h2 class="font-allura text-2xl text-forest mb-2">Renforcer son immunité naturellement</h2>
+                        <p class="text-soft-gray text-sm">Échinacée, astragale, propolis : les plantes qui soutiennent le système immunitaire pour affronter l'hiver et rester en forme toute l'année.</p>
+                    </div>
+                </a>
+                <a href="blog-sante-feminine.html" class="group bg-white rounded-2xl overflow-hidden shadow-lg border border-sage/10 hover-lift block">
+                    <div class="h-44 overflow-hidden">
+                        <img src="Medias/Plantes/femme-plantes.jpg" alt="Les plantes pour accompagner la santé féminine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sage text-xs mb-2">5 min de lecture</p>
+                        <h2 class="font-allura text-2xl text-forest mb-2">Les plantes pour accompagner la santé féminine</h2>
+                        <p class="text-soft-gray text-sm">Sauge, alchémille, framboisier : les plantes traditionnellement utilisées pour accompagner la femme à chaque étape de sa vie.</p>
+                    </div>
+                </a>
+        </div>
+    </section>
+
+    <footer class="bg-forest text-natural/80 py-10 mt-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm space-y-3">
+            <p class="font-allura text-2xl text-natural">Herboristerie de Dinan</p>
+            <p>5 rue de la Mittrie, 22100 Dinan &middot; <a href="contact.html" class="underline hover:text-chamomile">Nous contacter</a></p>
+            <p class="text-natural/60">&copy; 2026 Herboristerie de Dinan. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
