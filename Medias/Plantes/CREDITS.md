@@ -16,5 +16,6 @@ Photos temporaires (libres de droit, via Wikimedia Commons), en attendant une vr
 | bocaux-herbes.jpg / comptoir-boutique.jpg / cosmetiques-naturels.jpg / huiles-essentielles.jpg | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Gyogynovenyek1.jpg) | Szalkijanos | CC BY-SA 4.0 |
 | interieur-herboristerie.jpg | [Wikimedia Commons / DPLA](https://commons.wikimedia.org/wiki/File:Interior_of_an_Apothecary%27s_Shop_-_DPLA_-_f44bad9b7d203e2802262885d93ca347.jpg) | Giovanni Domenico Valentini (peinture, XVIIe s.) | CC BY 4.0 |
 | ../banniere.jpg | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Gyogynovenyek1.jpg) | Szalkijanos | CC BY-SA 4.0 |
+| mycotherapie.jpg | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ganoderma_lucidum_69556638.jpg) | — | CC BY 4.0 |
 
 Les licences CC BY / CC BY-SA imposent de créditer l'auteur si les photos sont republiées ailleurs (ex : réseaux sociaux). Un lien vers cette page suffit.
