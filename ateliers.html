@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ateliers créatifs à l'Herboristerie de Dinan : création de cosmétiques naturels et bien plus. Planning, tarifs et inscriptions.">
+    <meta name="keywords" content="atelier cosmétique naturel Dinan, atelier phytothérapie Dinan, atelier bien-être Dinan, cosmétique maison Dinan">
+    <meta name="robots" content="index, follow">
+    <title>Ateliers - Herboristerie de Dinan | Création de cosmétiques et bien-être</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Alice&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sage': '#8FAF9B', 'forest': '#4F6F5E', 'leaf': '#6F8F6B',
+                        'lavender': '#A89BC7', 'flower': '#E6A5A5', 'chamomile': '#E7C86E',
+                        'natural': '#F7F6F2', 'botanical': '#E8E2D7', 'soft-gray': '#6B6B6B'
+                    },
+                    fontFamily: { 'allura': ['Allura', 'cursive'], 'alice': ['Alice', 'serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Alice', serif; background-color: #F7F6F2; color: #4F6F5E; }
+        .font-allura { font-family: 'Allura', cursive; }
+        .font-alice { font-family: 'Alice', serif; }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F7F6F2; }
+        ::-webkit-scrollbar-thumb { background: #8FAF9B; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #6F8F6B; }
+        .watercolor-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%238FAF9B' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(79, 111, 94, 0.15); }
+    </style>
+</head>
+<body class="watercolor-bg antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-natural/90 backdrop-blur-md border-b border-sage/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="Medias/logo-herboristerie-dinan.png" alt="Herboristerie de Dinan" class="w-10 h-10">
+                    <div class="flex flex-col">
+                        <span class="font-allura text-2xl text-forest leading-none">Herboristerie de Dinan</span>
+                        <span class="text-xs text-soft-gray tracking-widest uppercase">Boutique · Consultations · Ateliers</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium">Accueil</a>
+                    <a href="boutique.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium">La Boutique</a>
+                    <a href="consultations.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium">Consultations</a>
+                    <a href="ateliers.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium border-b-2 border-sage">Ateliers</a>
+                    <a href="apropos.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium">À propos</a>
+                    <a href="contact.html" class="bg-forest text-natural px-6 py-2 rounded-full hover:bg-leaf transition-colors duration-200 shadow-md hover:shadow-lg">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-forest hover:text-sage focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-natural border-t border-sage/20">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">Accueil</a>
+                <a href="boutique.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">La Boutique</a>
+                <a href="consultations.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">Consultations</a>
+                <a href="ateliers.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md font-semibold">Ateliers</a>
+                <a href="apropos.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">À propos</a>
+                <a href="contact.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative pt-32 pb-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="Medias/banniere.jpg" alt="Bannière Herboristerie de Dinan" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+            <div class="absolute inset-0 bg-natural/70"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="font-allura text-6xl md:text-7xl lg:text-8xl text-forest leading-tight mb-6">
+                Nos <span class="text-leaf">Ateliers</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-soft-gray font-alice italic max-w-3xl mx-auto">
+                Apprenez à fabriquer vos propres produits naturels, en petit groupe, dans notre boutique à Dinan.
+            </p>
+        </div>
+    </section>
+
+    <!-- Atelier : création de cosmétiques -->
+    <section class="py-16 bg-white/50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-lg border border-sage/10 overflow-hidden hover-lift">
+                <div class="grid md:grid-cols-2">
+                    <div class="h-64 md:h-auto overflow-hidden">
+                        <img src="Medias/Plantes/cosmetiques-naturels.jpg" alt="Atelier création de cosmétiques naturels" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 md:p-10">
+                        <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-sage/20 text-sage mb-3">Exemple d'atelier</span>
+                        <h2 class="font-allura text-4xl text-forest mb-4">Création de cosmétiques naturels</h2>
+                        <p class="text-soft-gray leading-relaxed mb-6">
+                            Apprenez à fabriquer vous-même vos soins du quotidien - baume, crème ou savon - à partir
+                            de plantes, d'huiles végétales et d'huiles essentielles. Un atelier convivial en petit
+                            groupe, pour repartir avec vos propres créations et les bases pour continuer chez vous.
+                        </p>
+
+                        <dl class="space-y-3 mb-6 text-sm">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="clock" class="w-5 h-5 text-sage mt-0.5 flex-shrink-0"></i>
+                                <div>
+                                    <dt class="font-bold text-forest inline">Durée : </dt>
+                                    <dd class="inline text-soft-gray">2h à 2h30</dd>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="calendar" class="w-5 h-5 text-sage mt-0.5 flex-shrink-0"></i>
+                                <div>
+                                    <dt class="font-bold text-forest inline">Planning : </dt>
+                                    <dd class="inline text-soft-gray">un samedi par mois, 14h-16h30 - dates communiquées sur la page Contact et en boutique</dd>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="users" class="w-5 h-5 text-sage mt-0.5 flex-shrink-0"></i>
+                                <div>
+                                    <dt class="font-bold text-forest inline">Groupe : </dt>
+                                    <dd class="inline text-soft-gray">4 à 8 personnes, dès 12 ans (mineurs accompagnés d'un adulte)</dd>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="tag" class="w-5 h-5 text-sage mt-0.5 flex-shrink-0"></i>
+                                <div>
+                                    <dt class="font-bold text-forest inline">Tarif : </dt>
+                                    <dd class="inline text-soft-gray">35€ par personne, matériel et ingrédients inclus - vous repartez avec vos créations</dd>
+                                </div>
+                            </div>
+                        </dl>
+
+                        <details class="bg-natural/50 rounded-xl p-4 border border-sage/10 mb-6">
+                            <summary class="font-bold text-forest cursor-pointer">Conditions d'inscription</summary>
+                            <ul class="text-soft-gray text-sm leading-relaxed mt-3 list-disc list-inside space-y-1">
+                                <li>Inscription préalable requise, places limitées</li>
+                                <li>Règlement à l'inscription pour confirmer votre place</li>
+                                <li>Atelier maintenu à partir de 4 inscrits, remboursé intégralement si annulé</li>
+                                <li>En cas d'empêchement, prévenir au moins 48h à l'avance pour être reporté sur une prochaine session</li>
+                            </ul>
+                        </details>
+
+                        <a href="mailto:contact@herboristerie-dinan.fr?subject=Inscription%20atelier%20cr%C3%A9ation%20de%20cosm%C3%A9tiques" class="inline-flex items-center justify-center gap-2 bg-forest text-natural px-8 py-4 rounded-full hover:bg-leaf transition-colors font-bold shadow-lg w-full sm:w-auto">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                            <span>S'inscrire à cet atelier</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Autres ateliers à venir -->
+    <section class="py-16 bg-natural">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-sage font-medium tracking-wider uppercase text-sm">Et bientôt</span>
+            <h2 class="font-allura text-4xl md:text-5xl text-forest mt-2 mb-6">D'autres ateliers à venir</h2>
+            <p class="text-soft-gray leading-relaxed max-w-2xl mx-auto mb-8">
+                D'autres thèmes rejoindront progressivement le planning : reconnaissance des plantes médicinales,
+                fabrication de tisanes, initiation aux hydrolats... Le programme complet sera annoncé ici et sur
+                notre page Contact au fur et à mesure.
+            </p>
+            <a href="contact.html" class="inline-flex items-center justify-center gap-2 border-2 border-forest text-forest px-8 py-4 rounded-full hover:bg-forest hover:text-natural transition-colors">
+                <span>Être informé·e des prochains ateliers</span>
+                <i data-lucide="bell" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-forest text-natural/80 py-12 border-t border-natural/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="leaf" class="w-6 h-6 text-chamomile"></i>
+                        <span class="font-allura text-2xl text-natural">Herboristerie de Dinan</span>
+                    </div>
+                    <p class="text-sm text-natural/60">Herboristerie traditionnelle à Dinan, Bretagne. Plantes médicinales, tisanes et conseils bien-être.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-natural mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-chamomile transition-colors">Accueil</a></li>
+                        <li><a href="boutique.html" class="hover:text-chamomile transition-colors">La Boutique</a></li>
+                        <li><a href="consultations.html" class="hover:text-chamomile transition-colors">Consultations</a></li>
+                        <li><a href="ateliers.html" class="hover:text-chamomile transition-colors">Ateliers</a></li>
+                        <li><a href="apropos.html" class="hover:text-chamomile transition-colors">À propos</a></li>
+                        <li><a href="contact.html" class="hover:text-chamomile transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-natural mb-4">Informations</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mentions-legales.html" class="hover:text-chamomile transition-colors">Mentions légales</a></li>
+                        <li><a href="politique-confidentialite.html" class="hover:text-chamomile transition-colors">Politique de confidentialité</a></li>
+                        <li><a href="cgv.html" class="hover:text-chamomile transition-colors">CGV</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-natural mb-4">Suivez-nous</h4>
+                    <div class="flex gap-4">
+                        <span class="w-10 h-10 rounded-full bg-natural/10 flex items-center justify-center opacity-40 cursor-not-allowed" title="Bientôt disponible">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </span>
+                        <span class="w-10 h-10 rounded-full bg-natural/10 flex items-center justify-center opacity-40 cursor-not-allowed" title="Bientôt disponible">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-natural/10 pt-8 text-center text-sm text-natural/60">
+                <p>&copy; 2026 Herboristerie de Dinan. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('shadow-md', window.pageYOffset > 100);
+        });
+    </script>
+</body>
+</html>
