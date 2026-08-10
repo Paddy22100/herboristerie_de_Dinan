@@ -21,5 +21,7 @@ Photos temporaires (libres de droit, via Wikimedia Commons), en attendant une vr
 | sauge.jpg | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:20260614_Salvia_officinalis_03.jpg) | — | CC BY 4.0 |
 | melisse.jpg | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Melissa_officinalis_1.jpg) | — | CC BY 3.0 |
 | charlotte.jpg | Photo fournie par l'utilisateur (vraie photo de Charlotte) | — | N/A |
+| bourgeon.jpg | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:54_105_Apple_Bud_In_Sunset_(149687649).jpeg) | — | CC BY-SA 3.0 |
+| complements.jpg | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:DHA_pills.jpg) | — | CC0 (domaine public) |
 
 Les licences CC BY / CC BY-SA imposent de créditer l'auteur si les photos sont republiées ailleurs (ex : réseaux sociaux). Un lien vers cette page suffit.
