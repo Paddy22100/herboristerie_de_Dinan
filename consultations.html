@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consultations en naturopathie, méthode NAET, herboristerie et neurofeedback à Dinan avec Céline, Henrieta et Charlotte. Prise de rendez-vous et tarifs.">
+    <meta name="keywords" content="naturopathe Dinan, méthode NAET Dinan, herboriste Dinan, neurofeedback Dinan, consultation bien-être Dinan, Céline Henrieta Charlotte">
+    <meta name="robots" content="index, follow">
+    <title>Consultations - Herboristerie de Dinan | Naturopathie, NAET, Neurofeedback</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Alice&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sage': '#8FAF9B',
+                        'forest': '#4F6F5E',
+                        'leaf': '#6F8F6B',
+                        'lavender': '#A89BC7',
+                        'flower': '#E6A5A5',
+                        'chamomile': '#E7C86E',
+                        'natural': '#F7F6F2',
+                        'botanical': '#E8E2D7',
+                        'soft-gray': '#6B6B6B'
+                    },
+                    fontFamily: {
+                        'allura': ['Allura', 'cursive'],
+                        'alice': ['Alice', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Alice', serif;
+            background-color: #F7F6F2;
+            color: #4F6F5E;
+        }
+        .font-allura { font-family: 'Allura', cursive; }
+        .font-alice { font-family: 'Alice', serif; }
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F7F6F2; }
+        ::-webkit-scrollbar-thumb { background: #8FAF9B; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #6F8F6B; }
+        .watercolor-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%238FAF9B' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(79, 111, 94, 0.15); }
+        details > summary { cursor: pointer; list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] .chevron { transform: rotate(180deg); }
+        .chevron { transition: transform 0.2s ease; }
+    </style>
+</head>
+<body class="watercolor-bg antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-natural/90 backdrop-blur-md border-b border-sage/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <img src="Medias/logo-herboristerie-dinan.png" alt="Herboristerie de Dinan" class="w-10 h-10">
+                    <div class="flex flex-col">
+                        <span class="font-allura text-2xl text-forest leading-none">Herboristerie de Dinan</span>
+                        <span class="text-xs text-soft-gray tracking-widest uppercase">Boutique · Consultations · Ateliers</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium">Accueil</a>
+                    <a href="boutique.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium">La Boutique</a>
+                    <a href="consultations.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium border-b-2 border-sage">Consultations</a>
+                    <a href="ateliers.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium">Ateliers</a>
+                    <a href="apropos.html" class="text-forest hover:text-sage transition-colors duration-200 font-medium">À propos</a>
+                    <a href="contact.html" class="bg-forest text-natural px-6 py-2 rounded-full hover:bg-leaf transition-colors duration-200 shadow-md hover:shadow-lg">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-forest hover:text-sage focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-natural border-t border-sage/20">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">Accueil</a>
+                <a href="boutique.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">La Boutique</a>
+                <a href="consultations.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md font-semibold">Consultations</a>
+                <a href="ateliers.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">Ateliers</a>
+                <a href="apropos.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">À propos</a>
+                <a href="contact.html" class="block px-3 py-2 text-forest hover:bg-sage/10 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative pt-32 pb-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="Medias/banniere.jpg" alt="Bannière Herboristerie de Dinan" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+            <div class="absolute inset-0 bg-natural/70"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <h1 class="font-allura text-6xl md:text-7xl lg:text-8xl text-forest leading-tight mb-6">
+                    Nos <span class="text-leaf">Consultations</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-soft-gray font-alice italic max-w-3xl mx-auto">
+                    Trois praticiennes, trois approches complémentaires pour prendre soin de vous.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Céline -->
+    <section class="py-16 bg-white/50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-lg border border-sage/10 p-8 md:p-12">
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <img src="Medias/Plantes/thym.jpg" alt="Céline" class="w-32 h-32 rounded-full object-cover border-4 border-sage/20 mx-auto md:mx-0">
+                    <div class="flex-1">
+                        <h2 class="font-allura text-4xl text-forest mb-1">Céline</h2>
+                        <p class="text-sage font-medium mb-4">Naturopathe · Praticienne NAET · Herboriste</p>
+                        <p class="text-soft-gray leading-relaxed mb-6">
+                            Après un parcours dans le secteur commercial, Céline se réoriente vers la naturopathie,
+                            qu'elle étudie à la Faculté libre de Naturopathie de Dijon (école affiliée à la FÉNA),
+                            et devient adhérente de l'OMNES. C'est en testant la méthode NAET durant sa formation
+                            qu'elle découvre 33 intolérances alimentaires la concernant - une expérience personnelle
+                            qui la pousse à se spécialiser dans cette méthode pour accompagner à son tour ses clients.
+                        </p>
+
+                        <div class="space-y-3 mb-6">
+                            <details class="bg-natural/50 rounded-xl p-4 border border-sage/10">
+                                <summary class="flex items-center justify-between font-bold text-forest">
+                                    <span>Naturopathie</span>
+                                    <i data-lucide="chevron-down" class="w-5 h-5 chevron"></i>
+                                </summary>
+                                <p class="text-soft-gray text-sm leading-relaxed mt-3">
+                                    Reconnue par l'OMS comme la 3<sup>e</sup> médecine traditionnelle mondiale, la naturopathie
+                                    adopte une approche holistique de la personne. Elle s'appuie sur cinq principes hérités
+                                    d'Hippocrate (ne pas nuire, la nature comme guérisseuse, identifier les causes, détoxifier,
+                                    enseigner) et mobilise dix techniques : alimentation, exercice physique, gestion du stress,
+                                    hydrothérapie, phytologie, techniques manuelles, respiration, réflexologie et techniques
+                                    énergétiques. Elle accompagne les déséquilibres digestifs, hormonaux, nerveux, cutanés
+                                    ou ostéo-articulaires. La première séance (anamnèse complète) dure 1h à 1h30, les
+                                    suivantes 45 min à 1h.
+                                </p>
+                            </details>
+
+                            <details class="bg-natural/50 rounded-xl p-4 border border-sage/10">
+                                <summary class="flex items-center justify-between font-bold text-forest">
+                                    <span>Méthode NAET</span>
+                                    <i data-lucide="chevron-down" class="w-5 h-5 chevron"></i>
+                                </summary>
+                                <p class="text-soft-gray text-sm leading-relaxed mt-3">
+                                    Créée en 1983 par le Dr Devi Nambudripad, la méthode NAET est une approche naturelle,
+                                    non invasive et indolore visant à éliminer les réactions liées aux allergies et
+                                    intolérances. Elle repose sur le test musculaire (kinésiologie) pour identifier les
+                                    substances en cause, puis l'acupression pour rétablir la circulation énergétique,
+                                    suivie d'une éviction de 25h. Elle peut aider face aux allergies classiques mais aussi
+                                    à des troubles moins évidents : maux de tête, troubles digestifs, douleurs musculaires.
+                                    La première séance dure 1h30 à 2h, les suivantes 1h à 1h30.
+                                </p>
+                            </details>
+
+                            <details class="bg-natural/50 rounded-xl p-4 border border-sage/10">
+                                <summary class="flex items-center justify-between font-bold text-forest">
+                                    <span>Herboriste</span>
+                                    <i data-lucide="chevron-down" class="w-5 h-5 chevron"></i>
+                                </summary>
+                                <p class="text-soft-gray text-sm leading-relaxed mt-3">
+                                    Conseil personnalisé en plantes médicinales et tisanes : identification des plantes
+                                    adaptées à vos besoins (digestion, sommeil, stress, immunité...), posologie, précautions
+                                    d'usage et interactions à connaître, en complément - jamais en remplacement - d'un
+                                    avis médical.
+                                </p>
+                            </details>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="rdv-celine.html" class="inline-flex items-center justify-center gap-2 bg-forest text-natural px-6 py-3 rounded-full hover:bg-leaf transition-colors font-medium">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                                <span>Prise de rendez-vous</span>
+                            </a>
+                            <a href="rdv-celine.html#tarifs" class="inline-flex items-center justify-center gap-2 border-2 border-forest text-forest px-6 py-3 rounded-full hover:bg-forest hover:text-natural transition-colors font-medium">
+                                <i data-lucide="tag" class="w-4 h-4"></i>
+                                <span>Tarifs</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Henrieta -->
+    <section class="py-16 bg-natural">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-lg border border-sage/10 p-8 md:p-12">
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <img src="Medias/Plantes/camomille.jpg" alt="Henrieta" class="w-32 h-32 rounded-full object-cover border-4 border-sage/20 mx-auto md:mx-0">
+                    <div class="flex-1">
+                        <h2 class="font-allura text-4xl text-forest mb-1">Henrieta</h2>
+                        <p class="text-sage font-medium mb-4">Naturopathe · Esthéticienne · Herboriste</p>
+                        <p class="text-soft-gray leading-relaxed mb-6 italic">
+                            Parcours et présentation détaillée à venir.
+                        </p>
+
+                        <div class="space-y-3 mb-6">
+                            <details class="bg-natural/50 rounded-xl p-4 border border-sage/10">
+                                <summary class="flex items-center justify-between font-bold text-forest">
+                                    <span>Naturopathie</span>
+                                    <i data-lucide="chevron-down" class="w-5 h-5 chevron"></i>
+                                </summary>
+                                <p class="text-soft-gray text-sm leading-relaxed mt-3">
+                                    Approche holistique de la santé par des moyens naturels : alimentation, gestion du
+                                    stress, phytologie, hygiène de vie. Objectif : soutenir les capacités d'autorégulation
+                                    du corps plutôt que de traiter un symptôme isolément.
+                                </p>
+                            </details>
+
+                            <details class="bg-natural/50 rounded-xl p-4 border border-sage/10">
+                                <summary class="flex items-center justify-between font-bold text-forest">
+                                    <span>Soins esthétiques</span>
+                                    <i data-lucide="chevron-down" class="w-5 h-5 chevron"></i>
+                                </summary>
+                                <p class="text-soft-gray text-sm leading-relaxed mt-3">
+                                    Soins du visage et du corps à base de produits naturels et de plantes médicinales,
+                                    pensés en cohérence avec une approche naturopathique globale plutôt qu'en soin isolé.
+                                </p>
+                            </details>
+
+                            <details class="bg-natural/50 rounded-xl p-4 border border-sage/10">
+                                <summary class="flex items-center justify-between font-bold text-forest">
+                                    <span>Herboriste</span>
+                                    <i data-lucide="chevron-down" class="w-5 h-5 chevron"></i>
+                                </summary>
+                                <p class="text-soft-gray text-sm leading-relaxed mt-3">
+                                    Conseil personnalisé en plantes médicinales et tisanes, en complément - jamais en
+                                    remplacement - d'un avis médical.
+                                </p>
+                            </details>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="rdv-henrieta.html" class="inline-flex items-center justify-center gap-2 bg-forest text-natural px-6 py-3 rounded-full hover:bg-leaf transition-colors font-medium">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                                <span>Prise de rendez-vous</span>
+                            </a>
+                            <a href="rdv-henrieta.html#tarifs" class="inline-flex items-center justify-center gap-2 border-2 border-forest text-forest px-6 py-3 rounded-full hover:bg-forest hover:text-natural transition-colors font-medium">
+                                <i data-lucide="tag" class="w-4 h-4"></i>
+                                <span>Tarifs</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charlotte -->
+    <section class="py-16 bg-white/50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-lg border border-sage/10 p-8 md:p-12">
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <img src="Medias/Plantes/valeriane.jpg" alt="Charlotte" class="w-32 h-32 rounded-full object-cover border-4 border-sage/20 mx-auto md:mx-0">
+                    <div class="flex-1">
+                        <h2 class="font-allura text-4xl text-forest mb-1">Charlotte</h2>
+                        <p class="text-sage font-medium mb-4">Praticienne certifiée en Neurofeedback (Neuroptimum®)</p>
+                        <p class="text-soft-gray leading-relaxed mb-6">
+                            Bretonne d'origine, Charlotte a passé 22 ans au Québec avant de revenir en France en 2022.
+                            Après un parcours professionnel varié, elle se forme et se certifie au neurofeedback
+                            thérapeutique auprès de Neuroptimum®, ainsi qu'au programme MBSR de réduction du stress
+                            basée sur la pleine conscience. Elle s'appuie sur son expérience personnelle du
+                            neurofeedback pour proposer un accompagnement bienveillant, respectueux du rythme de
+                            chacun.
+                        </p>
+
+                        <div class="space-y-3 mb-6">
+                            <details class="bg-natural/50 rounded-xl p-4 border border-sage/10">
+                                <summary class="flex items-center justify-between font-bold text-forest">
+                                    <span>Neurofeedback thérapeutique</span>
+                                    <i data-lucide="chevron-down" class="w-5 h-5 chevron"></i>
+                                </summary>
+                                <p class="text-soft-gray text-sm leading-relaxed mt-3">
+                                    Méthode douce et naturelle qui, via des retours sensoriels (visuels, auditifs,
+                                    tactiles), aide le cerveau à réajuster son activité et à s'autoréguler sans effort
+                                    conscient. Peut accompagner le stress et l'anxiété, les troubles du sommeil, les
+                                    migraines, les douleurs chroniques, les troubles de l'humeur, les difficultés de
+                                    concentration et le brouillard mental. S'adresse aux enfants, adultes et seniors,
+                                    ainsi qu'aux sportifs et cadres en recherche d'optimisation de leurs performances.
+                                    Chaque séance est personnalisée selon les besoins de la personne.
+                                </p>
+                            </details>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="rdv-charlotte.html" class="inline-flex items-center justify-center gap-2 bg-forest text-natural px-6 py-3 rounded-full hover:bg-leaf transition-colors font-medium">
+                                <i data-lucide="calendar" class="w-4 h-4"></i>
+                                <span>Prise de rendez-vous</span>
+                            </a>
+                            <a href="rdv-charlotte.html#tarifs" class="inline-flex items-center justify-center gap-2 border-2 border-forest text-forest px-6 py-3 rounded-full hover:bg-forest hover:text-natural transition-colors font-medium">
+                                <i data-lucide="tag" class="w-4 h-4"></i>
+                                <span>Tarifs</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-forest text-natural text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-allura text-4xl md:text-5xl mb-6">Une question avant de réserver ?</h2>
+            <p class="text-lg text-natural/80 mb-8">
+                N'hésitez pas à nous écrire, nous vous répondons rapidement.
+            </p>
+            <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-chamomile text-forest px-8 py-4 rounded-full hover:bg-yellow-400 transition-colors font-bold shadow-lg">
+                <span>Nous contacter</span>
+                <i data-lucide="mail" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-forest text-natural/80 py-12 border-t border-natural/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="leaf" class="w-6 h-6 text-chamomile"></i>
+                        <span class="font-allura text-2xl text-natural">Herboristerie de Dinan</span>
+                    </div>
+                    <p class="text-sm text-natural/60">
+                        Herboristerie traditionnelle à Dinan, Bretagne.
+                        Plantes médicinales, tisanes et conseils bien-être.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-natural mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-chamomile transition-colors">Accueil</a></li>
+                        <li><a href="boutique.html" class="hover:text-chamomile transition-colors">La Boutique</a></li>
+                        <li><a href="consultations.html" class="hover:text-chamomile transition-colors">Consultations</a></li>
+                        <li><a href="ateliers.html" class="hover:text-chamomile transition-colors">Ateliers</a></li>
+                        <li><a href="apropos.html" class="hover:text-chamomile transition-colors">À propos</a></li>
+                        <li><a href="contact.html" class="hover:text-chamomile transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-natural mb-4">Informations</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mentions-legales.html" class="hover:text-chamomile transition-colors">Mentions légales</a></li>
+                        <li><a href="politique-confidentialite.html" class="hover:text-chamomile transition-colors">Politique de confidentialité</a></li>
+                        <li><a href="cgv.html" class="hover:text-chamomile transition-colors">CGV</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-natural mb-4">Suivez-nous</h4>
+                    <div class="flex gap-4">
+                        <span class="w-10 h-10 rounded-full bg-natural/10 flex items-center justify-center opacity-40 cursor-not-allowed" title="Bientôt disponible">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </span>
+                        <span class="w-10 h-10 rounded-full bg-natural/10 flex items-center justify-center opacity-40 cursor-not-allowed" title="Bientôt disponible">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-natural/10 pt-8 text-center text-sm text-natural/60">
+                <p>&copy; 2026 Herboristerie de Dinan. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('shadow-md', window.pageYOffset > 100);
+        });
+    </script>
+</body>
+</html>
