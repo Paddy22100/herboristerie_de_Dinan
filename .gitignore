@@ -1,3 +1,8 @@
 # Sauvegardes manuelles : redondant avec l'historique Git lui-même,
 # et source de duplication accidentelle de secrets dans le passé.
 Sauvegardes/
+
+.vercel
+
+# Notes contenant des identifiants en clair (mot de passe déjà exposé une fois sur ce dépôt)
+Supabase Herboristerie.txt
